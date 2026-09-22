@@ -3,15 +3,95 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Remo Singh | Official Music Portfolio</title>
   
+  <!-- ==================== PRIMARY SEO META TAGS ==================== -->
+  <title>Remo Singh | Official Music Portfolio & Indie Artist</title>
+  <meta name="title" content="Remo Singh | Official Music Portfolio & Indie Artist">
+  <meta name="description" content="Official website of Remo Singh. Indie singer-songwriter and music producer crafting soulful acoustic melodies, heartfelt lyrics, and original soundscapes. Stream music across Spotify, Apple Music, and YouTube.">
+  <meta name="keywords" content="Remo Singh, Remo Singh music, indie artist India, singer-songwriter, acoustic indie, music producer, Remo Singh songs, original music">
+  <meta name="author" content="Remo Singh">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://remosingh.in/">
+
+  <!-- ==================== OPEN GRAPH / FACEBOOK / WHATSAPP ==================== -->
+  <meta property="og:type" content="music.musician">
+  <meta property="og:url" content="https://remosingh.in/">
+  <meta property="og:title" content="Remo Singh | Official Music Portfolio">
+  <meta property="og:description" content="Official website of Remo Singh — Indie singer-songwriter and music producer. Explore original tracks and streaming links.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=1200&q=80">
+
+  <!-- ==================== TWITTER CARDS ==================== -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://remosingh.in/">
+  <meta property="twitter:title" content="Remo Singh | Official Music Portfolio">
+  <meta property="twitter:description" content="Official website of Remo Singh — Indie singer-songwriter and music producer.">
+  <meta property="twitter:image" content="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=1200&q=80">
+
+  <!-- ==================== AI SEARCH & LLM STRUCTURED DATA (JSON-LD) ==================== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://remosingh.in/#person",
+        "name": "Remo Singh",
+        "alternateName": "Remo",
+        "url": "https://remosingh.in",
+        "jobTitle": ["Singer", "Songwriter", "Music Producer", "Audio Engineer"],
+        "description": "Remo Singh is an independent singer-songwriter and music producer specializing in acoustic indie, melodic storytelling, and soulful soundscapes.",
+        "sameAs": [
+          "https://open.spotify.com",
+          "https://music.apple.com",
+          "https://www.youtube.com",
+          "https://www.instagram.com"
+        ]
+      },
+      {
+        "@type": "MusicGroup",
+        "@id": "https://remosingh.in/#artist",
+        "name": "Remo Singh",
+        "genre": ["Indie Pop", "Acoustic", "Singer-Songwriter"],
+        "url": "https://remosingh.in",
+        "member": {
+          "@id": "https://remosingh.in/#person"
+        }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://remosingh.in/#website",
+        "url": "https://remosingh.in",
+        "name": "Remo Singh Official Website",
+        "publisher": {
+          "@id": "https://remosingh.in/#person"
+        }
+      }
+    ]
+  }
+  </script>
+
   <!-- Google Fonts & Font Awesome Icons -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   <style>
+    :root {
+      --bg: #090a0f;
+      --card-bg: rgba(255, 255, 255, 0.03);
+      --card-border: rgba(255, 255, 255, 0.08);
+      --card-hover: rgba(255, 255, 255, 0.06);
+      --accent: #6366f1;
+      --accent-glow: rgba(99, 102, 241, 0.25);
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
+      --spotify: #1db954;
+      --youtube: #ff0000;
+      --apple: #fc3c44;
+      --instagram: #e1306c;
+    }
+
     * {
       margin: 0;
       padding: 0;
@@ -20,252 +100,347 @@
     }
 
     body {
-      background: radial-gradient(circle at top, #1e1b4b, #09090b 80%);
-      color: #f4f4f5;
+      background-color: var(--bg);
+      color: var(--text);
       min-height: 100vh;
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 40px 16px;
+      padding: 2.5rem 1rem;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    /* Ambient Glow Background */
+    body::before {
+      content: '';
+      position: fixed;
+      top: -20%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
+      z-index: -1;
+      pointer-events: none;
     }
 
     .container {
       width: 100%;
-      max-width: 580px;
+      max-width: 620px;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    /* Header & Profile */
+    header {
+      text-align: center;
       display: flex;
       flex-direction: column;
       align-items: center;
-      text-align: center;
     }
 
-    /* Profile Header */
-    .profile-img {
-      width: 120px;
-      height: 120px;
+    .avatar-wrapper {
+      position: relative;
+      width: 110px;
+      height: 110px;
+      margin-bottom: 1.25rem;
+    }
+
+    .avatar {
+      width: 100%;
+      height: 100%;
       border-radius: 50%;
-      border: 3px solid #6366f1;
-      box-shadow: 0 0 25px rgba(99, 102, 241, 0.4);
       object-fit: cover;
-      margin-bottom: 18px;
+      border: 2px solid rgba(255, 255, 255, 0.15);
+      box-shadow: 0 0 35px var(--accent-glow);
     }
 
-    .artist-name {
-      font-size: 1.8rem;
-      font-weight: 700;
-      letter-spacing: -0.5px;
-      margin-bottom: 6px;
-    }
-
-    .artist-bio {
-      font-size: 0.95rem;
-      color: #a1a1aa;
-      margin-bottom: 24px;
-      line-height: 1.5;
-    }
-
-    /* Music Player / Latest Release Box */
-    .featured-card {
-      width: 100%;
-      background: rgba(255, 255, 255, 0.04);
-      backdrop-filter: blur(12px);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: 16px;
-      padding: 20px;
-      margin-bottom: 24px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-    }
-
-    .badge {
-      display: inline-block;
+    .verified-badge {
+      position: absolute;
+      bottom: 2px;
+      right: 2px;
+      background: var(--accent);
+      color: #fff;
       font-size: 0.75rem;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      background: rgba(99, 102, 241, 0.2);
-      color: #818cf8;
-      border: 1px solid rgba(99, 102, 241, 0.3);
-      padding: 4px 10px;
-      border-radius: 20px;
-      margin-bottom: 10px;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      border: 2px solid var(--bg);
     }
 
-    .track-title {
-      font-size: 1.2rem;
+    h1.name {
+      font-size: 1.85rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.35rem;
+    }
+
+    .tagline {
+      font-size: 0.95rem;
       font-weight: 600;
-      margin-bottom: 4px;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 0.75rem;
     }
 
-    .track-subtitle {
-      font-size: 0.85rem;
-      color: #a1a1aa;
-      margin-bottom: 14px;
+    .bio-text {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      max-width: 500px;
     }
 
-    /* Streaming Platform Buttons */
-    .links-container {
-      width: 100%;
+    /* Section Styling */
+    .section-title {
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--text-muted);
+      margin-bottom: 0.85rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .section-title::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--card-border);
+    }
+
+    /* Featured Music Card */
+    .featured-card {
+      background: linear-gradient(145deg, rgba(99, 102, 241, 0.08) 0%, rgba(255, 255, 255, 0.02) 100%);
+      border: 1px solid rgba(99, 102, 241, 0.3);
+      border-radius: 18px;
+      padding: 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    .featured-cover {
+      width: 76px;
+      height: 76px;
+      border-radius: 12px;
+      object-fit: cover;
+      flex-shrink: 0;
+      border: 1px solid var(--card-border);
+    }
+
+    .featured-details {
+      flex: 1;
+    }
+
+    .featured-badge {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      padding: 0.2rem 0.6rem;
+      background: rgba(99, 102, 241, 0.2);
+      color: #a5b4fc;
+      border-radius: 20px;
+      margin-bottom: 0.4rem;
+    }
+
+    .featured-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 0.25rem;
+    }
+
+    .featured-meta {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+
+    /* Streaming & Social Links */
+    .links-list {
       display: flex;
       flex-direction: column;
-      gap: 12px;
-      margin-bottom: 30px;
+      gap: 0.85rem;
     }
 
-    .platform-btn {
+    .link-item {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 14px 20px;
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      border-radius: 12px;
-      color: #ffffff;
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      padding: 1rem 1.25rem;
+      border-radius: 14px;
       text-decoration: none;
-      font-size: 1rem;
-      font-weight: 500;
-      transition: all 0.25s ease;
+      color: var(--text);
+      transition: all 0.2s ease;
     }
 
-    .platform-btn:hover {
-      background: rgba(255, 255, 255, 0.12);
+    .link-item:hover {
+      background: var(--card-hover);
       transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+      border-color: rgba(255, 255, 255, 0.2);
     }
 
-    .btn-left {
+    .link-left {
       display: flex;
       align-items: center;
-      gap: 16px;
+      gap: 1rem;
     }
 
-    .btn-left i, .btn-left svg {
-      font-size: 1.5rem;
-      width: 26px;
-      height: 26px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
+    .platform-icon {
+      font-size: 1.4rem;
+      width: 24px;
+      text-align: center;
     }
 
-    /* Platform Brand Colors */
-    .spotify i { color: #1DB954; }
-    .apple i { color: #FC3C44; }
-    .ytmusic i { color: #FF0000; }
-    .amazon i { color: #00A8E1; }
-    .jiosaavn svg { fill: #00B1A7; }
-    .instagram i { color: #E1306C; }
+    .platform-icon.spotify { color: var(--spotify); }
+    .platform-icon.apple { color: var(--apple); }
+    .platform-icon.youtube { color: var(--youtube); }
+    .platform-icon.instagram { color: var(--instagram); }
 
-    .listen-tag {
-      font-size: 0.8rem;
-      color: #a1a1aa;
-      font-weight: 400;
+    .link-label {
+      font-weight: 600;
+      font-size: 0.95rem;
     }
 
-    /* Social Footer */
-    .social-links {
-      display: flex;
-      gap: 18px;
-      margin-top: 10px;
+    .link-arrow {
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      transition: transform 0.2s ease;
     }
 
-    .social-btn {
-      color: #71717a;
-      font-size: 1.3rem;
-      transition: color 0.2s;
-      text-decoration: none;
+    .link-item:hover .link-arrow {
+      transform: translateX(3px);
+      color: var(--text);
     }
 
-    .social-btn:hover {
-      color: #ffffff;
+    /* Machine-Readable Bio Box (Great for LLMs and Crawlers) */
+    .about-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 14px;
+      padding: 1.25rem;
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.7;
     }
 
+    .about-card p + p {
+      margin-top: 0.75rem;
+    }
+
+    /* Footer */
     footer {
-      margin-top: 40px;
+      text-align: center;
       font-size: 0.8rem;
-      color: #52525b;
+      color: #64748b;
+      margin-top: 1rem;
+      padding-bottom: 1rem;
+    }
+
+    footer a {
+      color: var(--text-muted);
+      text-decoration: none;
     }
   </style>
 </head>
 <body>
 
-  <div class="container">
-    <!-- Artist Photo & Info -->
-    <!-- 'profile.jpg' ko apni photo ka filename ya direct link bana lena -->
-    <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=300&q=80" alt="Artist Profile" class="profile-img">
-    <h1 class="artist-name">Your Name</h1>
-    <p class="artist-bio">Singer • Songwriter • Music Producer<br>Listen to my latest tracks on all streaming platforms.</p>
+  <main class="container">
+    <!-- Header / Bio -->
+    <header>
+      <div class="avatar-wrapper">
+        <img class="avatar" src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=300&q=80" alt="Remo Singh">
+        <span class="verified-badge"><i class="fa-solid fa-check"></i></span>
+      </div>
+      <h1 class="name">Remo Singh</h1>
+      <div class="tagline">Singer • Songwriter • Music Producer</div>
+      <p class="bio-text">
+        Crafting acoustic indie melodies, organic soundscapes, and heartfelt stories from the heart.
+      </p>
+    </header>
 
-    <!-- Latest Single Highlight / Feature Card -->
-    <div class="featured-card">
-      <span class="badge">Latest Release</span>
-      <h2 class="track-title">Song Title Here</h2>
-      <p class="track-subtitle">Produced & Composed by Your Name</p>
-      
-      <!-- Optional: You can embed a Spotify/YouTube player or direct audio here -->
-    </div>
-
-    <!-- Streaming Platform Links -->
-    <div class="links-container">
-      
-      <!-- Spotify -->
-      <a href="https://open.spotify.com" target="_blank" class="platform-btn spotify">
-        <div class="btn-left">
-          <i class="fa-brands fa-spotify"></i>
-          <span>Spotify</span>
+    <!-- Latest / Featured Music -->
+    <section aria-labelledby="featured-heading">
+      <div class="section-title" id="featured-heading">Featured Music</div>
+      <article class="featured-card">
+        <img class="featured-cover" src="https://images.unsplash.com/photo-1465847899084-d164df4dedc6?auto=format&fit=crop&w=200&q=80" alt="Latest Track Artwork">
+        <div class="featured-details">
+          <span class="featured-badge">Latest Release</span>
+          <h2 class="featured-title">Original Acoustic Melodies</h2>
+          <p class="featured-meta">Produced & Arranged by Remo Singh</p>
         </div>
-        <span class="listen-tag">Listen <i class="fa-solid fa-chevron-right"></i></span>
-      </a>
+      </article>
+    </section>
 
-      <!-- Apple Music -->
-      <a href="https://music.apple.com" target="_blank" class="platform-btn apple">
-        <div class="btn-left">
-          <i class="fa-brands fa-apple"></i>
-          <span>Apple Music</span>
-        </div>
-        <span class="listen-tag">Listen <i class="fa-solid fa-chevron-right"></i></span>
-      </a>
+    <!-- Streaming Platforms -->
+    <section aria-labelledby="stream-heading">
+      <div class="section-title" id="stream-heading">Stream & Listen</div>
+      <div class="links-list">
+        <a href="https://open.spotify.com" target="_blank" rel="noopener noreferrer" class="link-item">
+          <div class="link-left">
+            <i class="fa-brands fa-spotify platform-icon spotify"></i>
+            <span class="link-label">Spotify</span>
+          </div>
+          <span class="link-arrow"><i class="fa-solid fa-arrow-right"></i></span>
+        </a>
 
-      <!-- JioSaavn -->
-      <a href="https://www.jiosaavn.com" target="_blank" class="platform-btn jiosaavn">
-        <div class="btn-left">
-          <!-- JioSaavn SVG Icon -->
-          <svg viewBox="0 0 24 24">
-            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 14.5c-2.49 0-4.5-2.01-4.5-4.5S9.51 7.5 12 7.5s4.5 2.01 4.5 4.5-2.01 4.5-4.5 4.5zm0-7c-1.38 0-2.5 1.12-2.5 2.5s1.12 2.5 2.5 2.5 2.5-1.12 2.5-2.5-1.12-2.5-2.5-2.5z"/>
-          </svg>
-          <span>JioSaavn</span>
-        </div>
-        <span class="listen-tag">Listen <i class="fa-solid fa-chevron-right"></i></span>
-      </a>
+        <a href="https://music.apple.com" target="_blank" rel="noopener noreferrer" class="link-item">
+          <div class="link-left">
+            <i class="fa-brands fa-apple platform-icon apple"></i>
+            <span class="link-label">Apple Music</span>
+          </div>
+          <span class="link-arrow"><i class="fa-solid fa-arrow-right"></i></span>
+        </a>
 
-      <!-- Amazon Music -->
-      <a href="https://music.amazon.com" target="_blank" class="platform-btn amazon">
-        <div class="btn-left">
-          <i class="fa-brands fa-amazon"></i>
-          <span>Amazon Music</span>
-        </div>
-        <span class="listen-tag">Listen <i class="fa-solid fa-chevron-right"></i></span>
-      </a>
+        <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="link-item">
+          <div class="link-left">
+            <i class="fa-brands fa-youtube platform-icon youtube"></i>
+            <span class="link-label">YouTube Music & Videos</span>
+          </div>
+          <span class="link-arrow"><i class="fa-solid fa-arrow-right"></i></span>
+        </a>
 
-      <!-- YouTube Music -->
-      <a href="https://music.youtube.com" target="_blank" class="platform-btn ytmusic">
-        <div class="btn-left">
-          <i class="fa-brands fa-youtube"></i>
-          <span>YouTube Music</span>
-        </div>
-        <span class="listen-tag">Watch & Listen <i class="fa-solid fa-chevron-right"></i></span>
-      </a>
+        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="link-item">
+          <div class="link-left">
+            <i class="fa-brands fa-instagram platform-icon instagram"></i>
+            <span class="link-label">Instagram (@remosingh)</span>
+          </div>
+          <span class="link-arrow"><i class="fa-solid fa-arrow-right"></i></span>
+        </a>
+      </div>
+    </section>
 
-    </div>
+    <!-- About / AI Knowledge Base Section -->
+    <section aria-labelledby="about-heading">
+      <div class="section-title" id="about-heading">About the Artist</div>
+      <div class="about-card">
+        <p>
+          <strong>Remo Singh</strong> is an independent singer, songwriter, and audio producer. His music blends acoustic guitar fingerpicking, subtle ukulele textures, warm vocals, and indie arrangements.
+        </p>
+        <p>
+          With a focus on original songwriting, sound engineering, and heartfelt composition, Remo's work brings together acoustic warmth and modern independent production.
+        </p>
+      </div>
+    </section>
 
-    <!-- Social Links -->
-    <div class="social-links">
-      <a href="https://instagram.com" target="_blank" class="social-btn instagram"><i class="fa-brands fa-instagram"></i></a>
-      <a href="https://youtube.com" target="_blank" class="social-btn"><i class="fa-brands fa-youtube"></i></a>
-      <a href="mailto:your-email@example.com" class="social-btn"><i class="fa-regular fa-envelope"></i></a>
-    </div>
-
+    <!-- Footer -->
     <footer>
-      © 2026 Remo Singh. All rights reserved.
+      <p>© 2026 Remo Singh. All rights reserved.</p>
+      <p style="margin-top: 0.35rem;"><a href="mailto:contact@remosingh.in">Contact & Collaborations</a></p>
     </footer>
-  </div>
+  </main>
 
 </body>
 </html>
