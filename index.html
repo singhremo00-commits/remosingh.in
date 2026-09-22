@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Remo Singh | Official Music Portfolio</title>
+  
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    body {
+      background: radial-gradient(circle at top, #1e1b4b, #09090b 80%);
+      color: #f4f4f5;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 16px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 580px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    /* Profile Header */
+    .profile-img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 3px solid #6366f1;
+      box-shadow: 0 0 25px rgba(99, 102, 241, 0.4);
+      object-fit: cover;
+      margin-bottom: 18px;
+    }
+
+    .artist-name {
+      font-size: 1.8rem;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      margin-bottom: 6px;
+    }
+
+    .artist-bio {
+      font-size: 0.95rem;
+      color: #a1a1aa;
+      margin-bottom: 24px;
+      line-height: 1.5;
+    }
+
+    /* Music Player / Latest Release Box */
+    .featured-card {
+      width: 100%;
+      background: rgba(255, 255, 255, 0.04);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 16px;
+      padding: 20px;
+      margin-bottom: 24px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    }
+
+    .badge {
+      display: inline-block;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      background: rgba(99, 102, 241, 0.2);
+      color: #818cf8;
+      border: 1px solid rgba(99, 102, 241, 0.3);
+      padding: 4px 10px;
+      border-radius: 20px;
+      margin-bottom: 10px;
+    }
+
+    .track-title {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .track-subtitle {
+      font-size: 0.85rem;
+      color: #a1a1aa;
+      margin-bottom: 14px;
+    }
+
+    /* Streaming Platform Buttons */
+    .links-container {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 30px;
+    }
+
+    .platform-btn {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 20px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: 500;
+      transition: all 0.25s ease;
+    }
+
+    .platform-btn:hover {
+      background: rgba(255, 255, 255, 0.12);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+    }
+
+    .btn-left {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .btn-left i, .btn-left svg {
+      font-size: 1.5rem;
+      width: 26px;
+      height: 26px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Platform Brand Colors */
+    .spotify i { color: #1DB954; }
+    .apple i { color: #FC3C44; }
+    .ytmusic i { color: #FF0000; }
+    .amazon i { color: #00A8E1; }
+    .jiosaavn svg { fill: #00B1A7; }
+    .instagram i { color: #E1306C; }
+
+    .listen-tag {
+      font-size: 0.8rem;
+      color: #a1a1aa;
+      font-weight: 400;
+    }
+
+    /* Social Footer */
+    .social-links {
+      display: flex;
+      gap: 18px;
+      margin-top: 10px;
+    }
+
+    .social-btn {
+      color: #71717a;
+      font-size: 1.3rem;
+      transition: color 0.2s;
+      text-decoration: none;
+    }
+
+    .social-btn:hover {
+      color: #ffffff;
+    }
+
+    footer {
+      margin-top: 40px;
+      font-size: 0.8rem;
+      color: #52525b;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- Artist Photo & Info -->
+    <!-- 'profile.jpg' ko apni photo ka filename ya direct link bana lena -->
+    <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=300&q=80" alt="Artist Profile" class="profile-img">
+    <h1 class="artist-name">Your Name</h1>
+    <p class="artist-bio">Singer • Songwriter • Music Producer<br>Listen to my latest tracks on all streaming platforms.</p>
+
+    <!-- Latest Single Highlight / Feature Card -->
+    <div class="featured-card">
+      <span class="badge">Latest Release</span>
+      <h2 class="track-title">Song Title Here</h2>
+      <p class="track-subtitle">Produced & Composed by Your Name</p>
+      
+      <!-- Optional: You can embed a Spotify/YouTube player or direct audio here -->
+    </div>
+
+    <!-- Streaming Platform Links -->
+    <div class="links-container">
+      
+      <!-- Spotify -->
+      <a href="https://open.spotify.com" target="_blank" class="platform-btn spotify">
+        <div class="btn-left">
+          <i class="fa-brands fa-spotify"></i>
+          <span>Spotify</span>
+        </div>
+        <span class="listen-tag">Listen <i class="fa-solid fa-chevron-right"></i></span>
+      </a>
+
+      <!-- Apple Music -->
+      <a href="https://music.apple.com" target="_blank" class="platform-btn apple">
+        <div class="btn-left">
+          <i class="fa-brands fa-apple"></i>
+          <span>Apple Music</span>
+        </div>
+        <span class="listen-tag">Listen <i class="fa-solid fa-chevron-right"></i></span>
+      </a>
+
+      <!-- JioSaavn -->
+      <a href="https://www.jiosaavn.com" target="_blank" class="platform-btn jiosaavn">
+        <div class="btn-left">
+          <!-- JioSaavn SVG Icon -->
+          <svg viewBox="0 0 24 24">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 14.5c-2.49 0-4.5-2.01-4.5-4.5S9.51 7.5 12 7.5s4.5 2.01 4.5 4.5-2.01 4.5-4.5 4.5zm0-7c-1.38 0-2.5 1.12-2.5 2.5s1.12 2.5 2.5 2.5 2.5-1.12 2.5-2.5-1.12-2.5-2.5-2.5z"/>
+          </svg>
+          <span>JioSaavn</span>
+        </div>
+        <span class="listen-tag">Listen <i class="fa-solid fa-chevron-right"></i></span>
+      </a>
+
+      <!-- Amazon Music -->
+      <a href="https://music.amazon.com" target="_blank" class="platform-btn amazon">
+        <div class="btn-left">
+          <i class="fa-brands fa-amazon"></i>
+          <span>Amazon Music</span>
+        </div>
+        <span class="listen-tag">Listen <i class="fa-solid fa-chevron-right"></i></span>
+      </a>
+
+      <!-- YouTube Music -->
+      <a href="https://music.youtube.com" target="_blank" class="platform-btn ytmusic">
+        <div class="btn-left">
+          <i class="fa-brands fa-youtube"></i>
+          <span>YouTube Music</span>
+        </div>
+        <span class="listen-tag">Watch & Listen <i class="fa-solid fa-chevron-right"></i></span>
+      </a>
+
+    </div>
+
+    <!-- Social Links -->
+    <div class="social-links">
+      <a href="https://instagram.com" target="_blank" class="social-btn instagram"><i class="fa-brands fa-instagram"></i></a>
+      <a href="https://youtube.com" target="_blank" class="social-btn"><i class="fa-brands fa-youtube"></i></a>
+      <a href="mailto:your-email@example.com" class="social-btn"><i class="fa-regular fa-envelope"></i></a>
+    </div>
+
+    <footer>
+      © 2026 Remo Singh. All rights reserved.
+    </footer>
+  </div>
+
+</body>
+</html>
+
