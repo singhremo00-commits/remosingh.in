@@ -292,26 +292,26 @@ h1.page-title {
   background: var(--green);
   color: #000;
   font-family: var(--font-heading);
-  font-size: 0.95rem;
+  font-size: 0.82rem;              /* Font size chhota kiya */
   font-weight: 700;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   text-decoration: none;
-  padding: 1.1rem 2.8rem;
-  border-radius: 50px;
+  padding: 0.75rem 1.8rem;         /* Size compact aur balanced kiya */
+  border-radius: 40px;
   display: inline-flex;
   align-items: center;
-  gap: 0.75rem;
-  box-shadow: 0 10px 30px var(--green-glow);
+  gap: 0.5rem;
+  box-shadow: 0 6px 20px var(--green-glow);
   transition: var(--transition);
   cursor: pointer;
-  margin-top: 0.5rem;
+  margin-top: 0.3rem;
 }
 
 .btn-listen-now:hover {
   background: var(--green-hover);
-  transform: translateY(-2px) scale(1.02);
-  box-shadow: 0 14px 36px rgba(30, 215, 96, 0.35);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(30, 215, 96, 0.35);
 }
 
 /* Music Platform Cards */
