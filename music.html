@@ -5,31 +5,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#090a0f">
 
-  <title>Music | Remo Singh Official Streaming Platforms</title>
-  <meta name="title" content="Music | Remo Singh Official Streaming Platforms">
-  <meta name="description" content="Listen to Remo Singh’s music on official streaming and music platforms including Spotify, Apple Music, and YouTube Music.">
+  <!-- SEO & Metadata -->
+  <title>Music Streams | Remo Singh Official Streaming Platforms</title>
+  <meta name="title" content="Music Streams | Remo Singh Official Streaming Platforms">
+  <meta name="description" content="Listen to Remo Singh’s music on official streaming platforms including Spotify, Apple Music, YouTube, JioSaavn, Amazon Music, and SoundCloud.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://remosingh.in/music.html">
 
+  <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://remosingh.in/music.html">
-  <meta property="og:title" content="Music | Remo Singh Official Streaming Platforms">
+  <meta property="og:title" content="Music Streams | Remo Singh Official Streaming Platforms">
   <meta property="og:description" content="Listen to Remo Singh’s music on official streaming and music platforms.">
   <meta property="og:image" content="https://remosingh.in/images/remo-singh-hero.jpg">
   <meta property="og:site_name" content="Remo Singh">
 
+  <!-- Twitter / X -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:url" content="https://remosingh.in/music.html">
-  <meta name="twitter:title" content="Music | Remo Singh Official Streaming Platforms">
+  <meta name="twitter:title" content="Music Streams | Remo Singh Official Streaming Platforms">
   <meta name="twitter:description" content="Listen to Remo Singh’s music on official streaming and music platforms.">
   <meta name="twitter:image" content="https://remosingh.in/images/remo-singh-hero.jpg">
 
+  <!-- Fonts & Icons -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="style.css">
 
+  <!-- Schema.org JSON-LD (Search Engines & AI Entity Readability) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -40,13 +45,24 @@
         "name": "Remo Singh",
         "jobTitle": "Singer and Songwriter",
         "birthDate": "1994-03-10",
-        "url": "https://remosingh.in/"
+        "url": "https://remosingh.in/",
+        "sameAs": [
+          "https://open.spotify.com/artist/7bGcTdqpFyXBpqxJEbW5Rs",
+          "https://music.apple.com/us/artist/remo-singh/1569242778",
+          "https://www.youtube.com/@remosingh1",
+          "https://music.amazon.com/artists/B095XD3V3S/remo-singh",
+          "https://www.jiosaavn.com/artist/remo-singh-songs/KSHbJsmyFCc_",
+          "https://on.soundcloud.com/jGbyRIrbW5cLNo84PG",
+          "https://www.instagram.com/remo__singh",
+          "https://www.facebook.com/remo.singh.902604",
+          "https://x.com/RemoSin14"
+        ]
       },
       {
         "@type": "WebPage",
         "@id": "https://remosingh.in/music.html#webpage",
         "url": "https://remosingh.in/music.html",
-        "name": "Music | Remo Singh",
+        "name": "Music Streams | Remo Singh",
         "isPartOf": { "@id": "https://remosingh.in/#website" },
         "about": { "@id": "https://remosingh.in/#person" },
         "description": "Listen to Remo Singh’s music on official streaming and music platforms."
@@ -57,6 +73,7 @@
 </head>
 <body>
 
+  <!-- Shared Header -->
   <header class="site-header">
     <a href="index.html" class="brand-link" aria-label="Remo Singh Home">Remo Singh</a>
     <button class="menu-trigger" id="menuTrigger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="menuOverlay">
@@ -68,12 +85,24 @@
     </button>
   </header>
 
+  <!-- Fullscreen Navigation with Dropdown -->
   <div class="menu-overlay" id="menuOverlay" role="dialog" aria-modal="true" aria-label="Navigation Menu">
     <button class="menu-close-btn" id="menuClose" aria-label="Close navigation menu">&times;</button>
     <nav>
       <ul class="overlay-nav-list">
         <li><a href="index.html" class="overlay-nav-link">Home</a></li>
-        <li><a href="music.html" class="overlay-nav-link active">Music</a></li>
+        
+        <!-- Music Dropdown -->
+        <li class="nav-item-dropdown">
+          <button class="overlay-nav-link dropdown-toggle active" id="musicDropdownBtn" aria-expanded="true">
+            Music <span class="dropdown-chevron">&darr;</span>
+          </button>
+          <ul class="dropdown-sub-menu is-open" id="musicSubMenu">
+            <li><a href="music.html" class="dropdown-sub-link active">Music Streams</a></li>
+            <li><a href="songs.html" class="dropdown-sub-link">All Songs</a></li>
+          </ul>
+        </li>
+
         <li><a href="videos.html" class="overlay-nav-link">Videos</a></li>
         <li><a href="about.html" class="overlay-nav-link">About</a></li>
         <li><a href="gallery.html" class="overlay-nav-link">Gallery</a></li>
@@ -82,16 +111,16 @@
     </nav>
   </div>
 
+  <!-- Music Platforms Section -->
   <main class="main-wrapper">
     <div class="page-header">
-      <h1 class="page-title">Music</h1>
+      <h1 class="page-title">Music Streams</h1>
       <p class="page-subtitle">Listen to Remo Singh’s music on official streaming and music platforms.</p>
     </div>
 
-    <section class="platform-grid" aria-label="Streaming Services">
+    <section class="platform-grid" aria-label="Official Streaming Platforms">
       <!-- Spotify -->
-      <!-- Replace # with the official Remo Singh Spotify URL -->
-      <a href="#" target="_blank" rel="noopener noreferrer" class="platform-card">
+      <a href="https://open.spotify.com/artist/7bGcTdqpFyXBpqxJEbW5Rs" target="_blank" rel="noopener noreferrer" class="platform-card" aria-label="Listen on Spotify">
         <div class="platform-left">
           <div class="platform-icon"><i class="fa-brands fa-spotify" style="color: #1db954;"></i></div>
           <span class="platform-name">Spotify</span>
@@ -100,8 +129,7 @@
       </a>
 
       <!-- Apple Music -->
-      <!-- Replace # with the official Remo Singh Apple Music URL -->
-      <a href="#" target="_blank" rel="noopener noreferrer" class="platform-card">
+      <a href="https://music.apple.com/us/artist/remo-singh/1569242778" target="_blank" rel="noopener noreferrer" class="platform-card" aria-label="Listen on Apple Music">
         <div class="platform-left">
           <div class="platform-icon"><i class="fa-brands fa-apple" style="color: #fc3c44;"></i></div>
           <span class="platform-name">Apple Music</span>
@@ -109,9 +137,8 @@
         <span class="platform-action">Listen Now &rarr;</span>
       </a>
 
-      <!-- YouTube Music -->
-      <!-- Replace # with the official Remo Singh YouTube Music URL -->
-      <a href="#" target="_blank" rel="noopener noreferrer" class="platform-card">
+      <!-- YouTube Music / Channel -->
+      <a href="https://www.youtube.com/@remosingh1" target="_blank" rel="noopener noreferrer" class="platform-card" aria-label="Listen on YouTube Music">
         <div class="platform-left">
           <div class="platform-icon"><i class="fa-brands fa-youtube" style="color: #ff0000;"></i></div>
           <span class="platform-name">YouTube Music</span>
@@ -119,19 +146,8 @@
         <span class="platform-action">Listen Now &rarr;</span>
       </a>
 
-      <!-- SoundCloud -->
-      <!-- Replace # with the official Remo Singh SoundCloud URL -->
-      <a href="#" target="_blank" rel="noopener noreferrer" class="platform-card">
-        <div class="platform-left">
-          <div class="platform-icon"><i class="fa-brands fa-soundcloud" style="color: #ff5500;"></i></div>
-          <span class="platform-name">SoundCloud</span>
-        </div>
-        <span class="platform-action">Listen Now &rarr;</span>
-      </a>
-
       <!-- Amazon Music -->
-      <!-- Replace # with the official Remo Singh Amazon Music URL -->
-      <a href="#" target="_blank" rel="noopener noreferrer" class="platform-card">
+      <a href="https://music.amazon.com/artists/B095XD3V3S/remo-singh" target="_blank" rel="noopener noreferrer" class="platform-card" aria-label="Listen on Amazon Music">
         <div class="platform-left">
           <div class="platform-icon"><i class="fa-brands fa-amazon" style="color: #ff9900;"></i></div>
           <span class="platform-name">Amazon Music</span>
@@ -140,8 +156,7 @@
       </a>
 
       <!-- JioSaavn -->
-      <!-- Replace # with the official Remo Singh JioSaavn URL -->
-      <a href="#" target="_blank" rel="noopener noreferrer" class="platform-card">
+      <a href="https://www.jiosaavn.com/artist/remo-singh-songs/KSHbJsmyFCc_" target="_blank" rel="noopener noreferrer" class="platform-card" aria-label="Listen on JioSaavn">
         <div class="platform-left">
           <div class="platform-icon"><i class="fa-solid fa-music" style="color: #2bc5b4;"></i></div>
           <span class="platform-name">JioSaavn</span>
@@ -149,12 +164,11 @@
         <span class="platform-action">Listen Now &rarr;</span>
       </a>
 
-      <!-- Bandcamp -->
-      <!-- Replace # with the official Remo Singh Bandcamp URL -->
-      <a href="#" target="_blank" rel="noopener noreferrer" class="platform-card">
+      <!-- SoundCloud -->
+      <a href="https://on.soundcloud.com/jGbyRIrbW5cLNo84PG" target="_blank" rel="noopener noreferrer" class="platform-card" aria-label="Listen on SoundCloud">
         <div class="platform-left">
-          <div class="platform-icon"><i class="fa-brands fa-bandcamp" style="color: #629aa9;"></i></div>
-          <span class="platform-name">Bandcamp</span>
+          <div class="platform-icon"><i class="fa-brands fa-soundcloud" style="color: #ff5500;"></i></div>
+          <span class="platform-name">SoundCloud</span>
         </div>
         <span class="platform-action">Listen Now &rarr;</span>
       </a>
@@ -168,4 +182,3 @@
   <script src="script.js"></script>
 </body>
 </html>
-
