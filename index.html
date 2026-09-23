@@ -84,7 +84,18 @@
     <nav>
       <ul class="overlay-nav-list">
         <li><a href="index.html" class="overlay-nav-link active">Home</a></li>
-        <li><a href="music.html" class="overlay-nav-link">Music</a></li>
+        
+        <!-- Yahan update kiya gaya hai: Music Dropdown -->
+        <li class="nav-item-dropdown">
+          <button class="overlay-nav-link dropdown-toggle" id="musicDropdownBtn" aria-expanded="false">
+            Music <span class="dropdown-chevron">&darr;</span>
+          </button>
+          <ul class="dropdown-sub-menu" id="musicSubMenu">
+            <li><a href="music.html" class="dropdown-sub-link">Music Streams</a></li>
+            <li><a href="songs.html" class="dropdown-sub-link">All Songs</a></li>
+          </ul>
+        </li>
+
         <li><a href="videos.html" class="overlay-nav-link">Videos</a></li>
         <li><a href="about.html" class="overlay-nav-link">About</a></li>
         <li><a href="gallery.html" class="overlay-nav-link">Gallery</a></li>
