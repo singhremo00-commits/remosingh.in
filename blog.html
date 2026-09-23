@@ -9,62 +9,35 @@
   <meta name="description" content="Official stories, songwriting journals, and behind-the-scenes by independent artist Remo Singh.">
   <link rel="canonical" href="https://remosingh.in/blog.html">
 
-  <!-- Open Graph / SEO -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://remosingh.in/blog.html">
   <meta property="og:title" content="Journal & Stories | Remo Singh Official">
   <meta property="og:description" content="Official stories, songwriting journals, and behind-the-scenes by Remo Singh.">
 
-  <!-- Google Font & Icons -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Plus+Jakarta+Sans:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  
-  <!-- Main Stylesheet -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body class="blog-page-body">
 
-  <!-- Header / Navigation -->
   <header class="blog-header">
     <a href="index.html" class="nav-brand">REMO SINGH</a>
     <a href="index.html" class="back-home-btn"><i class="fa-solid fa-arrow-left"></i> Home</a>
   </header>
 
-  <!-- Hero Title -->
   <section class="blog-hero">
     <span class="sub-badge">OFFICIAL JOURNAL</span>
     <h1>Stories, Music & Thoughts</h1>
     <p>Behind-the-scenes, acoustic songwriting diaries, and official updates.</p>
   </section>
 
-  <!-- Blog Posts Grid -->
   <main class="blog-container">
-    <div class="posts-grid">
-
-      <!-- Post Card 1 -->
-      <article class="post-card">
-        <div class="post-meta">
-          <span class="post-date"><i class="fa-regular fa-calendar"></i> September 2026</span>
-          <span class="post-tag">Studio Story</span>
-        </div>
-        <h2><a href="post-acoustic-journey.html">The Acoustic Space: Writing In Silence</a></h2>
-        <p>A look into capturing raw acoustic guitar textures, stripped-down vocals, and the process behind composing heartfelt indie melodies.</p>
-        <a href="post-acoustic-journey.html" class="read-more-link">Read Story <i class="fa-solid fa-arrow-right"></i></a>
-      </article>
-
-      <!-- Post Card 2 -->
-      <article class="post-card">
-        <div class="post-meta">
-          <span class="post-date"><i class="fa-regular fa-calendar"></i> Coming Soon</span>
-          <span class="post-tag">Music Production</span>
-        </div>
-        <h2><a href="#">Building Stems & Harmonies for Indie Tracks</a></h2>
-        <p>Layering vocal doubles, acoustic instruments, and finding the sweet spot in an intimate indie arrangement.</p>
-        <span class="coming-soon-label">Coming Soon</span>
-      </article>
-
+    <!-- Automated Post Cards Container -->
+    <div class="posts-grid" id="posts-container">
+      <!-- Loading state -->
+      <p style="color: #9ca3af; text-align: center;">Loading stories...</p>
     </div>
   </main>
 
@@ -77,17 +50,36 @@
     <p>© 2026 Remo Singh. All rights reserved.</p>
   </footer>
 
+  <!-- Automation Script -->
+  <script>
+    async function loadJournalPosts() {
+      const container = document.getElementById('posts-container');
+      try {
+        const response = await fetch('posts.json?v=' + new Date().getTime());
+        const posts = await response.json();
+
+        if (!posts || posts.length === 0) {
+          container.innerHTML = '<p style="color: #9ca3af; text-align: center;">No stories published yet.</p>';
+          return;
+        }
+
+        container.innerHTML = posts.map(post => `
+          <article class="post-card">
+            <div class="post-meta">
+              <span class="post-date"><i class="fa-regular fa-calendar"></i> ${post.date}</span>
+              <span class="post-tag">${post.tag}</span>
+            </div>
+            <h2><a href="${post.link}">${post.title}</a></h2>
+            <p>${post.summary}</p>
+            <a href="${post.link}" class="read-more-link">Read Story <i class="fa-solid fa-arrow-right"></i></a>
+          </article>
+        `).join('');
+      } catch (err) {
+        console.error('Error loading posts:', err);
+        container.innerHTML = '<p style="color: #ef4444; text-align: center;">Failed to load stories.</p>';
+      }
+    }
+    loadJournalPosts();
+  </script>
 </body>
 </html>
-
-      <!-- New Post Card -->
-      <article class="post-card">
-        <div class="post-meta">
-          <span class="post-date"><i class="fa-regular fa-calendar"></i> September 23, 2026</span>
-          <span class="post-tag">Artist Diary</span>
-        </div>
-        <h2><a href="post-first-track.html">Behind The Music: My Creative Journey</a></h2>
-        <p>An intimate look into songwriting, capturing acoustic melodies, and building raw indie arrangements.</p>
-        <a href="post-first-track.html" class="read-more-link">Read Story <i class="fa-solid fa-arrow-right"></i></a>
-      </article>
-
