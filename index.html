@@ -5,12 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#090a0f">
 
+  <!-- SEO & Metadata -->
   <title>Remo Singh | Official Artist Website</title>
   <meta name="title" content="Remo Singh | Official Artist Website">
   <meta name="description" content="Official website of Remo Singh, independent singer and songwriter creating soft, emotional, and soulful original music.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://remosingh.in/">
 
+  <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://remosingh.in/">
   <meta property="og:title" content="Remo Singh | Official Artist Website">
@@ -18,19 +20,24 @@
   <meta property="og:image" content="https://remosingh.in/images/remo-singh-hero.jpg">
   <meta property="og:site_name" content="Remo Singh">
 
+  <!-- Twitter / X -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:url" content="https://remosingh.in/">
   <meta name="twitter:title" content="Remo Singh | Official Artist Website">
   <meta name="twitter:description" content="Official website of Remo Singh, independent singer and songwriter creating soft, emotional, and soulful original music.">
   <meta name="twitter:image" content="https://remosingh.in/images/remo-singh-hero.jpg">
 
+  <!-- Performance Preload for Hero Image -->
   <link rel="preload" as="image" href="images/remo-singh-hero.jpg" fetchpriority="high">
 
+  <!-- Fonts & Icons -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="style.css">
 
+  <!-- Schema.org JSON-LD (Search Engines & AI Entity Source) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -43,7 +50,13 @@
         "birthDate": "1994-03-10",
         "url": "https://remosingh.in/",
         "image": "https://remosingh.in/images/remo-singh-hero.jpg",
-        "description": "Remo Singh is a singer and songwriter who has been creating music independently since 2018."
+        "description": "Remo Singh is a singer and songwriter who has been creating music independently since 2018.",
+        "sameAs": [
+          "https://open.spotify.com/artist/7bGcTdqpFyXBpqxJEbW5Rs",
+          "https://www.instagram.com/remo__singh",
+          "https://www.facebook.com/remo.singh.902604",
+          "https://x.com/RemoSin14"
+        ]
       },
       {
         "@type": "WebSite",
@@ -64,7 +77,7 @@
   }
   </script>
 </head>
-<body>
+<body class="home-page-body">
 
   <!-- Shared Header -->
   <header class="site-header">
@@ -78,14 +91,14 @@
     </button>
   </header>
 
-  <!-- Shared Fullscreen Navigation Overlay -->
+  <!-- Fullscreen Navigation Overlay with Dropdown -->
   <div class="menu-overlay" id="menuOverlay" role="dialog" aria-modal="true" aria-label="Navigation Menu">
     <button class="menu-close-btn" id="menuClose" aria-label="Close navigation menu">&times;</button>
     <nav>
       <ul class="overlay-nav-list">
         <li><a href="index.html" class="overlay-nav-link active">Home</a></li>
         
-        <!-- Yahan update kiya gaya hai: Music Dropdown -->
+        <!-- Music Dropdown -->
         <li class="nav-item-dropdown">
           <button class="overlay-nav-link dropdown-toggle" id="musicDropdownBtn" aria-expanded="false">
             Music <span class="dropdown-chevron">&darr;</span>
@@ -102,6 +115,14 @@
         <li><a href="contact.html" class="overlay-nav-link">Contact</a></li>
       </ul>
     </nav>
+
+    <!-- Social Links inside Hamburger Overlay Bottom -->
+    <div class="overlay-socials">
+      <a href="https://open.spotify.com/artist/7bGcTdqpFyXBpqxJEbW5Rs" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Spotify"><i class="fa-brands fa-spotify"></i></a>
+      <a href="https://www.instagram.com/remo__singh" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+      <a href="https://www.facebook.com/remo.singh.902604" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+      <a href="https://x.com/RemoSin14" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+    </div>
   </div>
 
   <!-- Minimal Fullscreen Hero -->
@@ -120,6 +141,24 @@
       <p class="home-artist-role">Singer • Songwriter</p>
       <a href="music.html" class="btn-listen-now">Listen Now</a>
     </div>
+
+    <!-- Fixed Bottom Social Footer on Homepage -->
+    <footer class="home-bottom-footer" aria-label="Official Social Links">
+      <div class="home-social-row">
+        <a href="https://open.spotify.com/artist/7bGcTdqpFyXBpqxJEbW5Rs" target="_blank" rel="noopener noreferrer" class="home-social-link" title="Spotify" aria-label="Spotify">
+          <i class="fa-brands fa-spotify"></i>
+        </a>
+        <a href="https://www.instagram.com/remo__singh" target="_blank" rel="noopener noreferrer" class="home-social-link" title="Instagram" aria-label="Instagram">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="https://www.facebook.com/remo.singh.902604" target="_blank" rel="noopener noreferrer" class="home-social-link" title="Facebook" aria-label="Facebook">
+          <i class="fa-brands fa-facebook-f"></i>
+        </a>
+        <a href="https://x.com/RemoSin14" target="_blank" rel="noopener noreferrer" class="home-social-link" title="X (Twitter)" aria-label="X (Twitter)">
+          <i class="fa-brands fa-x-twitter"></i>
+        </a>
+      </div>
+    </footer>
   </main>
 
   <script src="script.js"></script>
