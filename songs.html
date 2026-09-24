@@ -11,6 +11,14 @@
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://remosingh.in/songs.html">
 
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://remosingh.in/songs.html">
+  <meta property="og:title" content="All Songs | Remo Singh">
+  <meta property="og:description" content="34 original compositions written and performed by Remo Singh.">
+  <meta property="og:image" content="https://remosingh.in/images/Remo%20singh.jpg">
+  <meta property="og:site_name" content="Remo Singh">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
@@ -19,7 +27,7 @@
 <body>
 
   <header class="site-header">
-    <a href="index.html" class="brand-link">Remo Singh</a>
+    <a href="index.html" class="brand-link" aria-label="Remo Singh Home">Remo Singh</a>
     <button class="menu-trigger" id="menuTrigger" aria-label="Open menu">
       <span>Menu</span>
       <div class="menu-icon-bars"><span></span><span></span></div>
@@ -27,7 +35,7 @@
   </header>
 
   <div class="menu-overlay" id="menuOverlay">
-    <button class="menu-close-btn" id="menuClose">&times;</button>
+    <button class="menu-close-btn" id="menuClose" aria-label="Close menu">&times;</button>
     <nav>
       <ul class="overlay-nav-list">
         <li><a href="index.html" class="overlay-nav-link">Home</a></li>
@@ -42,7 +50,7 @@
   </div>
 
   <main class="main-wrapper">
-    <div class="page-header" style="text-align: center; padding: 40px 16px 20px;">
+    <div class="page-header">
       <h1 class="page-title">All Songs</h1>
       <p class="page-subtitle">34 original compositions written and performed by Remo Singh.</p>
     </div>
@@ -497,7 +505,6 @@
           <button class="btn-action btn-lyrics" onclick="showLyricsModal('Gussa Na Ho')">Lyrics</button>
         </div>
       </div>
-
       <!-- 31 -->
       <div class="song-card">
         <div class="song-meta">
@@ -517,4 +524,104 @@
       <div class="song-card">
         <div class="song-meta">
           <span class="song-num">32</span>
-          <div c
+          <div class="song-info">
+            <h4 class="song-title">Monor Yari</h4>
+            <div class="song-author">Lyrics: Remo Singh</div>
+          </div>
+        </div>
+        <div class="song-actions">
+          <a href="#" class="btn-action btn-listen" target="_blank" rel="noopener">Listen Now</a>
+          <button class="btn-action btn-lyrics" onclick="showLyricsModal('Monor Yari')">Lyrics</button>
+        </div>
+      </div>
+
+      <!-- 33 -->
+      <div class="song-card">
+        <div class="song-meta">
+          <span class="song-num">33</span>
+          <div class="song-info">
+            <h4 class="song-title">Mattou Me Kisade</h4>
+            <div class="song-author">Lyrics: Remo Singh</div>
+          </div>
+        </div>
+        <div class="song-actions">
+          <a href="#" class="btn-action btn-listen" target="_blank" rel="noopener">Listen Now</a>
+          <button class="btn-action btn-lyrics" onclick="showLyricsModal('Mattou Me Kisade')">Lyrics</button>
+        </div>
+      </div>
+
+      <!-- 34 -->
+      <div class="song-card">
+        <div class="song-meta">
+          <span class="song-num">34</span>
+          <div class="song-info">
+            <h4 class="song-title">J Tor Shriti</h4>
+            <div class="song-author">Lyrics: Remo Singh</div>
+          </div>
+        </div>
+        <div class="song-actions">
+          <a href="#" class="btn-action btn-listen" target="_blank" rel="noopener">Listen Now</a>
+          <button class="btn-action btn-lyrics" onclick="showLyricsModal('J Tor Shriti')">Lyrics</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Mobile Bottom Sheet / Modal for Lyrics -->
+  <div class="lyrics-modal-backdrop" id="lyricsBackdrop">
+    <div class="lyrics-sheet" role="dialog" aria-modal="true">
+      <div class="sheet-handle"></div>
+      <div class="sheet-header">
+        <h3 class="sheet-title" id="lyricsTitle">Song Title</h3>
+        <button class="sheet-close" id="lyricsCloseBtn" aria-label="Close">&times;</button>
+      </div>
+      <div class="sheet-body" id="lyricsContent"></div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2026 Remo Singh. All rights reserved.</p>
+  </footer>
+
+  <script src="lyrics.js"></script>
+  <script src="script.js"></script>
+
+  <!-- Guaranteed Working Modal Handler -->
+  <script>
+    function showLyricsModal(title) {
+      var backdrop = document.getElementById("lyricsBackdrop");
+      var titleEl = document.getElementById("lyricsTitle");
+      var contentEl = document.getElementById("lyricsContent");
+
+      if (!backdrop || !titleEl || !contentEl) return;
+
+      titleEl.textContent = title;
+      var text = (typeof songLyricsMap !== 'undefined' && songLyricsMap[title]) ? songLyricsMap[title] : null;
+      contentEl.textContent = text || "Lyrics coming soon...\n\nWritten and composed by Remo Singh.";
+
+      backdrop.classList.add("open");
+      document.body.style.overflow = "hidden";
+    }
+
+    function hideLyricsModal() {
+      var backdrop = document.getElementById("lyricsBackdrop");
+      if (backdrop) {
+        backdrop.classList.remove("open");
+        document.body.style.overflow = "";
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", function() {
+      var closeBtn = document.getElementById("lyricsCloseBtn");
+      var backdrop = document.getElementById("lyricsBackdrop");
+
+      if (closeBtn) closeBtn.onclick = hideLyricsModal;
+      if (backdrop) {
+        backdrop.onclick = function(e) {
+          if (e.target === backdrop) hideLyricsModal();
+        };
+      }
+    });
+  </script>
+</body>
+</html>
