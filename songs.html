@@ -5,87 +5,224 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#090a0f">
 
-  <title>All Songs | Remo Singh Official Discography</title>
-  <meta name="title" content="All Songs | Remo Singh Official Discography">
-  <meta name="description" content="Complete list of 34 original songs written and performed by independent singer and songwriter Remo Singh.">
+  <title>All Songs | Remo Singh</title>
+  <meta name="title" content="All Songs | Remo Singh">
+  <meta name="description" content="Explore all 34 original compositions written and performed by independent singer-songwriter Remo Singh.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://remosingh.in/songs.html">
-
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://remosingh.in/songs.html">
-  <meta property="og:title" content="All Songs | Remo Singh Official Discography">
-  <meta property="og:description" content="Complete list of 34 original songs written and performed by Remo Singh.">
-  <meta property="og:image" content="https://remosingh.in/images/remo-singh-hero.jpg">
-  <meta property="og:site_name" content="Remo Singh">
-
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:url" content="https://remosingh.in/songs.html">
-  <meta name="twitter:title" content="All Songs | Remo Singh Official Discography">
-  <meta name="twitter:description" content="Complete list of 34 original songs written and performed by Remo Singh.">
-  <meta name="twitter:image" content="https://remosingh.in/images/remo-singh-hero.jpg">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Person",
-        "@id": "https://remosingh.in/#person",
-        "name": "Remo Singh",
-        "jobTitle": "Singer and Songwriter",
-        "birthDate": "1994-03-10",
-        "url": "https://remosingh.in/"
-      },
-      {
-        "@type": "WebPage",
-        "@id": "https://remosingh.in/songs.html#webpage",
-        "url": "https://remosingh.in/songs.html",
-        "name": "All Songs | Remo Singh",
-        "isPartOf": { "@id": "https://remosingh.in/#website" },
-        "about": { "@id": "https://remosingh.in/#person" },
-        "description": "Complete list of 34 original songs created and written by Remo Singh."
+  <style>
+    /* Song List Row Layout */
+    .songs-container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 20px 16px 80px;
+    }
+    .song-card {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.07);
+      border-radius: 12px;
+      padding: 14px 18px;
+      margin-bottom: 10px;
+      gap: 12px;
+      transition: all 0.2s ease;
+    }
+    .song-card:hover {
+      background: rgba(255, 255, 255, 0.06);
+      border-color: rgba(255, 255, 255, 0.15);
+    }
+    .song-meta {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      min-width: 0;
+      flex: 1;
+    }
+    .song-num {
+      font-size: 0.85rem;
+      color: rgba(255, 255, 255, 0.4);
+      font-weight: 600;
+      min-width: 24px;
+    }
+    .song-info {
+      min-width: 0;
+    }
+    .song-title {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #fff;
+      margin: 0;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .song-author {
+      font-size: 0.8rem;
+      color: rgba(255, 255, 255, 0.5);
+      margin-top: 2px;
+    }
+    .song-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-shrink: 0;
+    }
+    .btn-action {
+      padding: 6px 14px;
+      border-radius: 8px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      text-decoration: none;
+      cursor: pointer;
+      border: 1px solid transparent;
+      transition: all 0.2s ease;
+    }
+    .btn-listen {
+      background: rgba(255, 255, 255, 0.08);
+      color: #fff;
+      border-color: rgba(255, 255, 255, 0.15);
+    }
+    .btn-listen:hover {
+      background: #fff;
+      color: #090a0f;
+    }
+    .btn-lyrics {
+      background: transparent;
+      color: #38bdf8;
+      border-color: rgba(56, 189, 248, 0.35);
+    }
+    .btn-lyrics:hover {
+      background: rgba(56, 189, 248, 0.15);
+    }
+
+    /* Modal / Bottom Sheet Style */
+    .lyrics-modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.75);
+      backdrop-filter: blur(6px);
+      z-index: 1000;
+      display: flex;
+      align-items: flex-end; /* Mobile Bottom Sheet */
+      justify-content: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.25s ease;
+    }
+    .lyrics-modal-backdrop.open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .lyrics-sheet {
+      width: 100%;
+      max-width: 580px;
+      max-height: 82vh;
+      background: #11131a;
+      border-top-left-radius: 24px;
+      border-top-right-radius: 24px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-bottom: none;
+      box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.6);
+      transform: translateY(100%);
+      transition: transform 0.3s cubic-bezier(0.2, 0.9, 0.3, 1);
+      display: flex;
+      flex-direction: column;
+    }
+    .lyrics-modal-backdrop.open .lyrics-sheet {
+      transform: translateY(0);
+    }
+    .sheet-handle {
+      width: 44px;
+      height: 4px;
+      background: rgba(255, 255, 255, 0.25);
+      border-radius: 2px;
+      margin: 12px auto 6px;
+    }
+    .sheet-header {
+      padding: 10px 20px 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .sheet-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #fff;
+      margin: 0;
+    }
+    .sheet-close {
+      background: rgba(255, 255, 255, 0.08);
+      border: none;
+      color: #fff;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      cursor: pointer;
+    }
+    .sheet-body {
+      padding: 24px 20px;
+      overflow-y: auto;
+      font-size: 0.98rem;
+      line-height: 1.8;
+      color: rgba(255, 255, 255, 0.85);
+      white-space: pre-line;
+      text-align: center;
+    }
+
+    /* Desktop View: Centered Modal */
+    @media (min-width: 768px) {
+      .lyrics-modal-backdrop {
+        align-items: center;
+        padding: 20px;
       }
-    ]
-  }
-  </script>
+      .lyrics-sheet {
+        border-radius: 20px;
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        max-height: 75vh;
+        transform: scale(0.95);
+        transition: transform 0.25s ease;
+      }
+      .lyrics-modal-backdrop.open .lyrics-sheet {
+        transform: scale(1);
+      }
+      .sheet-handle {
+        display: none;
+      }
+    }
+  </style>
 </head>
 <body>
 
-  <!-- Shared Header -->
   <header class="site-header">
-    <a href="index.html" class="brand-link" aria-label="Remo Singh Home">Remo Singh</a>
-    <button class="menu-trigger" id="menuTrigger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="menuOverlay">
+    <a href="index.html" class="brand-link">Remo Singh</a>
+    <button class="menu-trigger" id="menuTrigger" aria-label="Open menu">
       <span>Menu</span>
-      <div class="menu-icon-bars" aria-hidden="true">
-        <span></span>
-        <span></span>
-      </div>
+      <div class="menu-icon-bars"><span></span><span></span></div>
     </button>
   </header>
 
-  <!-- Fullscreen Navigation with Dropdown -->
-  <div class="menu-overlay" id="menuOverlay" role="dialog" aria-modal="true" aria-label="Navigation Menu">
-    <button class="menu-close-btn" id="menuClose" aria-label="Close navigation menu">&times;</button>
+  <div class="menu-overlay" id="menuOverlay">
+    <button class="menu-close-btn" id="menuClose">&times;</button>
     <nav>
       <ul class="overlay-nav-list">
         <li><a href="index.html" class="overlay-nav-link">Home</a></li>
-        
-        <!-- Music Dropdown -->
-        <li class="nav-item-dropdown">
-          <button class="overlay-nav-link dropdown-toggle active" id="musicDropdownBtn" aria-expanded="true">
-            Music <span class="dropdown-chevron">&darr;</span>
-          </button>
-          <ul class="dropdown-sub-menu" id="musicSubMenu">
-            <li><a href="music.html" class="dropdown-sub-link">Music Streams</a></li>
-            <li><a href="songs.html" class="dropdown-sub-link active">All Songs</a></li>
-          </ul>
-        </li>
-
+        <li><a href="music.html" class="overlay-nav-link">Music</a></li>
+        <li><a href="songs.html" class="overlay-nav-link active">All Songs</a></li>
         <li><a href="videos.html" class="overlay-nav-link">Videos</a></li>
         <li><a href="about.html" class="overlay-nav-link">About</a></li>
         <li><a href="gallery.html" class="overlay-nav-link">Gallery</a></li>
@@ -95,348 +232,121 @@
   </div>
 
   <main class="main-wrapper">
-    <div class="page-header">
+    <div class="page-header" style="text-align: center; padding: 40px 16px 20px;">
       <h1 class="page-title">All Songs</h1>
       <p class="page-subtitle">34 original compositions written and performed by Remo Singh.</p>
     </div>
 
-    <!-- Clean Horizontal Row Tracklist -->
-    <section class="songs-list-container" aria-label="Song Catalog">
+    <div class="songs-container" id="songsList">
+      <!-- 34 Tracks list injected below -->
+    </div>
+  </main>
 
-      <!-- Track 1 -->
-      <article class="song-row">
-        <span class="song-number">01</span>
-        <h2 class="song-title-text">Raati</h2>
-        <span class="song-credit-text">Lyrics: Remo Singh</span>
-        <div class="song-row-actions">
-          <a href="#" class="btn-song-action" target="_blank" rel="noopener noreferrer">Listen Now</a>
-          <a href="#" class="btn-song-action btn-watch" target="_blank" rel="noopener noreferrer">Watch</a>
+  <!-- Mobile Bottom Sheet / Modal for Lyrics -->
+  <div class="lyrics-modal-backdrop" id="lyricsBackdrop">
+    <div class="lyrics-sheet" role="dialog" aria-modal="true">
+      <div class="sheet-handle"></div>
+      <div class="sheet-header">
+        <h3 class="sheet-title" id="lyricsTitle">Song Title</h3>
+        <button class="sheet-close" id="lyricsCloseBtn" aria-label="Close">&times;</button>
+      </div>
+      <div class="sheet-body" id="lyricsContent">
+        Loading lyrics...
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2026 Remo Singh. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+
+  <script>
+    // 34 Songs List
+    const songs = [
+      { id: "01", title: "Raati", listenUrl: "#" },
+      { id: "02", title: "Raati 2", listenUrl: "#" },
+      { id: "03", title: "Nigshing Owri", listenUrl: "#" },
+      { id: "04", title: "T Sara Nai", listenUrl: "#" },
+      { id: "05", title: "T Sara Nai 2", listenUrl: "#" },
+      { id: "06", title: "Aji Tore Peya", listenUrl: "#" },
+      { id: "07", title: "Ahesile", listenUrl: "#" },
+      { id: "08", title: "Khalkoruri", listenUrl: "#" },
+      { id: "09", title: "Monor Dairy", listenUrl: "#" },
+      { id: "10", title: "Monor Yaari", listenUrl: "#" },
+      { id: "11", title: "Tor Sale", listenUrl: "#" },
+      { id: "12", title: "Nais Durey Durey", listenUrl: "#" },
+      { id: "13", title: "Hopon", listenUrl: "#" },
+      { id: "14", title: "Ti", listenUrl: "#" },
+      { id: "15", title: "Ti 2", listenUrl: "#" },
+      { id: "16", title: "Banar Moyango", listenUrl: "#" },
+      { id: "17", title: "Thawri Impani Oya", listenUrl: "#" },
+      { id: "18", title: "Nigisga Durey", listenUrl: "#" },
+      { id: "19", title: "Nai Kuno Bana", listenUrl: "#" },
+      { id: "20", title: "Nai Kuno Bana 2", listenUrl: "#" },
+      { id: "21", title: "Thaitai Hudda Mor Ti", listenUrl: "#" },
+      { id: "22", title: "Morgoi Nagoi Ti", listenUrl: "#" },
+      { id: "23", title: "Thaile Ti Kumpey", listenUrl: "#" },
+      { id: "24", title: "Asha Nai", listenUrl: "#" },
+      { id: "25", title: "Jauriga Nai Beliya", listenUrl: "#" },
+      { id: "26", title: "Aaji Dehiya Tore", listenUrl: "#" },
+      { id: "27", title: "T Naile", listenUrl: "#" },
+      { id: "28", title: "Banar Yaari", listenUrl: "#" },
+      { id: "29", title: "Maya Ti", listenUrl: "#" },
+      { id: "30", title: "Gussa Na Ho", listenUrl: "#" },
+      { id: "31", title: "Monor D", listenUrl: "#" },
+      { id: "32", title: "Monor Yari", listenUrl: "#" },
+      { id: "33", title: "Mattou Me Kisade", listenUrl: "#" },
+      { id: "34", title: "J Tor Shriti", listenUrl: "#" }
+    ];
+
+    // Placeholder lyrics database (yahan aap kisi bhi gaane ki lyrics replace kar sakte hain)
+    const lyricsData = {
+      "Raati": "Raati nishith jage mor mone,\nKoto kotha aaji torey bujhai...\n\n(Official lyrics by Remo Singh)",
+      "J Tor Shriti": "J tor shriti buke aaji,\nHarai aami nishi raate...\n\n(Official lyrics by Remo Singh)"
+    };
+
+    // Render Song Cards
+    const container = document.getElementById("songsList");
+    container.innerHTML = songs.map(s => `
+      <div class="song-card">
+        <div class="song-meta">
+          <span class="song-num">${s.id}</span>
+          <div class="song-info">
+            <h4 class="song-title">${s.title}</h4>
+            <div class="song-author">Lyrics: Remo Singh</div>
+          </div>
         </div>
-      </article>
-
-      <!-- Track 2 -->
-      <article class="song-row">
-        <span class="song-number">02</span>
-        <h2 class="song-title-text">Raati 2</h2>
-        <span class="song-credit-text">Lyrics: Remo Singh</span>
-        <div class="song-row-actions">
-          <a href="#" class="btn-song-action" target="_blank" rel="noopener noreferrer">Listen Now</a>
-          <a href="#" class="btn-song-action btn-watch" target="_blank" rel="noopener noreferrer">Watch</a>
+        <div class="song-actions">
+          <a href="${s.listenUrl}" class="btn-action btn-listen" target="_blank" rel="noopener">Listen Now</a>
+          <button class="btn-action btn-lyrics" onclick="openLyrics('${s.title}')">Lyrics</button>
         </div>
-      </article>
+      </div>
+    `).join("");
 
-      <!-- Track 3 -->
-      <article class="song-row">
-        <span class="song-number">03</span>
-        <h2 class="song-title-text">Nigshing Owri</h2>
-        <span class="song-credit-text">Lyrics: Remo Singh</span>
-        <div class="song-row-actions">
-          <a href="#" class="btn-song-action" target="_blank" rel="noopener noreferrer">Listen Now</a>
-          <a href="#" class="btn-song-action btn-watch" target="_blank" rel="noopener noreferrer">Watch</a>
-        </div>
-      </article>
+    // Modal / Bottom Sheet Interactions
+    const backdrop = document.getElementById("lyricsBackdrop");
+    const lyricsTitle = document.getElementById("lyricsTitle");
+    const lyricsContent = document.getElementById("lyricsContent");
+    const closeBtn = document.getElementById("lyricsCloseBtn");
 
-      <!-- Track 4 -->
-      <article class="song-row">
-        <span class="song-number">04</span>
-        <h2 class="song-title-text">T Sara Nai</h2>
-        <span class="song-credit-text">Lyrics: Remo Singh</span>
-        <div class="song-row-actions">
-          <a href="#" class="btn-song-action" target="_blank" rel="noopener noreferrer">Listen Now</a>
-          <a href="#" class="btn-song-action btn-watch" target="_blank" rel="noopener noreferrer">Watch</a>
-        </div>
-      </article>
+    function openLyrics(title) {
+      lyricsTitle.textContent = title;
+      lyricsContent.textContent = lyricsData[title] || "Lyrics coming soon...\nWritten and Composed by Remo Singh.";
+      backdrop.classList.add("open");
+      document.body.style.overflow = "hidden"; // background scroll lock
+    }
 
-      <!-- Track 5 -->
-      <article class="song-row">
-        <span class="song-number">05</span>
-        <h2 class="song-title-text">T Sara Nai 2</h2>
-        <span class="song-credit-text">Lyrics: Remo Singh</span>
-        <div class="song-row-actions">
-          <a href="#" class="btn-song-action" target="_blank" rel="noopener noreferrer">Listen Now</a>
-          <a href="#" class="btn-song-action btn-watch" target="_blank" rel="noopener noreferrer">Watch</a>
-        </div>
-      </article>
+    function closeLyrics() {
+      backdrop.classList.remove("open");
+      document.body.style.overflow = "";
+    }
 
-      <!-- Track 6 -->
-      <article class="song-row">
-        <span class="song-number">06</span>
-        <h2 class="song-title-text">Aji Tore Peya</h2>
-        <span class="song-credit-text">Lyrics: Remo Singh</span>
-        <div class="song-row-actions">
-          <a href="#" class="btn-song-action" target="_blank" rel="noopener noreferrer">Listen Now</a>
-          <a href="#" class="btn-song-action btn-watch" target="_blank" rel="noopener noreferrer">Watch</a>
-        </div>
-      </article>
-
-      <!-- Track 7 -->
-      <article class="song-row">
-        <span class="song-number">07</span>
-        <h2 class="song-title-text">Ahesile</h2>
-        <span class="song-credit-text">Lyrics: Remo Singh</span>
-        <div class="song-row-actions">
-          <a href="#" class="btn-song-action" target="_blank" rel="noopener noreferrer">Listen Now</a>
-          <a href="#" class="btn-song-action btn-watch" target="_blank" rel="noopener noreferrer">Watch</a>
-        </div>
-      </article>
-
-      <!-- Track 8 -->
-      <article class="song-row">
-        <span class="song-number">08</span>
-        <h2 class="song-title-text">Khalokururi</h2>
-        <span class="song-credit-text">Lyrics: Remo Singh</span>
-        <div class="song-row-actions">
-          <a href="#" class="btn-song-action" target="_blank" rel="noopener noreferrer">Listen Now</a>
-          <a href="#" class="btn-song-action btn-watch" target="_blank" rel="noopener noreferrer">Watch</a>
-        </div>
-      </article>
-
-      <!-- Track 9 -->
-      <article class="song-row">
-        <span class="song-number">09</span>
-        <h2 class="song-title-text">Monor Dairy</h2>
-        <span class="song-credit-text">Lyrics: Remo Singh</span>
-        <div class="song-row-actions">
-          <a href="#" class="btn-song-action" target="_blank" rel="noopener noreferrer">Listen Now</a>
-          <a href="#" class="btn-song-action btn-watch" target="_blank" rel="noopener noreferrer">Watch</a>
-        </div>
-      </article>
-
-      <!-- Track 10 -->
-      <article class="song-row">
-        <span class="song-number">10</span>
-        <h2 class="song-title-text">Monor Yaari</h2>
-        <span class="song-credit-text">Lyrics: Remo Singh</span>
-        <div class="song-row-actions">
-          <a href="#" class="btn-song-action" target="_blank" rel="noopener noreferrer">Listen Now</a>
-          <a href="#" class="btn-song-action btn-watch" target="_blank" rel="noopener noreferrer">Watch</a>
-        </div>
-      </article>
-
-      <!-- Track 11 -->
-      <article class="song-row">
-        <span class="song-number">11</span>
-        <h2 class="song-title-text">Tor Sale</h2>
-        <span class="song-credit-text">Lyrics: Remo Singh</span>
-        <div class="song-row-actions">
-          <a href="#" class="btn-song-action" target="_blank" rel="noopener noreferrer">Listen Now</a>
-          <a href="#" class="btn-song-action btn-watch" target="_blank" rel="noopener noreferrer">Watch</a>
-        </div>
-      </article>
-
-      <!-- Track 12 -->
-      <article class="song-row">
-        <span class="song-number">12</span>
-        <h2 class="song-title-text">Nais Durey Durey</h2>
-        <span class="song-credit-text">Lyrics: Remo Singh</span>
-        <div class="song-row-actions">
-          <a href="#" class="btn-song-action" target="_blank" rel="noopener noreferrer">Listen Now</a>
-          <a href="#" class="btn-song-action btn-watch" target="_blank" rel="noopener noreferrer">Watch</a>
-        </div>
-      </article>
-
-      <!-- Track 13 -->
-      <article class="song-row">
-        <span class="song-number">13</span>
-        <h2 class="song-title-text">Hopon</h2>
-        <span class="song-credit-text">Lyrics: Remo Singh</span>
-        <div class="song-row-actions">
-          <a href="#" class="btn-song-action" target="_blank" rel="noopener noreferrer">Listen Now</a>
-          <a href="#" class="btn-song-action btn-watch" target="_blank" rel="noopener noreferrer">Watch</a>
-        </div>
-      </article>
-
-      <!-- Track 14 -->
-      <article class="song-row">
-        <span class="song-number">14</span>
-        <h2 class="song-title-text">Ti</h2>
-        <span class="song-credit-text">Lyrics: Remo Singh</span>
-        <div class="song-row-actions">
-          <a href="#" class="btn-song-action" target="_blank" rel="noopener noreferrer">Listen Now</a>
-          <a href="#" class="btn-song-action btn-watch" target="_blank" rel="noopener noreferrer">Watch</a>
-        </div>
-      </article>
-
-      <!-- Track 15 -->
-      <article class="song-row">
-        <span class="song-number">15</span>
-        <h2 class="song-title-text">Ti 2</h2>
-        <span class="song-credit-text">Lyrics: Remo Singh</span>
-        <div class="song-row-actions">
-          <a href="#" class="btn-song-action" target="_blank" rel="noopener noreferrer">Listen Now</a>
-          <a href="#" class="btn-song-action btn-watch" target="_blank" rel="noopener noreferrer">Watch</a>
-        </div>
-      </article>
-
-      <!-- Track 16 -->
-      <article class="song-row">
-        <span class="song-number">16</span>
-        <h2 class="song-title-text">Banar Moyango</h2>
-        <span class="song-credit-text">Lyrics: Remo Singh</span>
-        <div class="song-row-actions">
-          <a href="#" class="btn-song-action" target="_blank" rel="noopener noreferrer">Listen Now</a>
-          <a href="#" class="btn-song-action btn-watch" target="_blank" rel="noopener noreferrer">Watch</a>
-        </div>
-      </article>
-
-      <!-- Track 17 -->
-      <article class="song-row">
-        <span class="song-number">17</span>
-        <h2 class="song-title-text">Thawri Impani Oya</h2>
-        <span class="song-credit-text">Lyrics: Remo Singh</span>
-        <div class="song-row-actions">
-          <a href="#" class="btn-song-action" target="_blank" rel="noopener noreferrer">Listen Now</a>
-          <a href="#" class="btn-song-action btn-watch" target="_blank" rel="noopener noreferrer">Watch</a>
-        </div>
-      </article>
-
-      <!-- Track 18 -->
-      <article class="song-row">
-        <span class="song-number">18</span>
-        <h2 class="song-title-text">Nagisga Durey</h2>
-        <span class="song-credit-text">Lyrics: Remo Singh</span>
-        <div class="song-row-actions">
-          <a href="#" class="btn-song-action" target="_blank" rel="noopener noreferrer">Listen Now</a>
-          <a href="#" class="btn-song-action btn-watch" target="_blank" rel="noopener noreferrer">Watch</a>
-        </div>
-      </article>
-
-      <!-- Track 19 -->
-      <article class="song-row">
-        <span class="song-number">19</span>
-        <h2 class="song-title-text">Nai Kuno Bana</h2>
-        <span class="song-credit-text">Lyrics: Remo Singh</span>
-        <div class="song-row-actions">
-          <a href="#" class="btn-song-action" target="_blank" rel="noopener noreferrer">Listen Now</a>
-          <a href="#" class="btn-song-action btn-watch" target="_blank" rel="noopener noreferrer">Watch</a>
-        </div>
-      </article>
-
-      <!-- Track 20 -->
-      <article class="song-row">
-        <span class="song-number">20</span>
-        <h2 class="song-title-text">Nai Kuno Bana 2</h2>
-        <span class="song-credit-text">Lyrics: Remo Singh</span>
-        <div class="song-row-actions">
-          <a href="#" class="btn-song-action" target="_blank" rel="noopener noreferrer">Listen Now</a>
-          <a href="#" class="btn-song-action btn-watch" target="_blank" rel="noopener noreferrer">Watch</a>
-        </div>
-      </article>
-
-      <!-- Track 21 -->
-      <article class="song-row">
-        <span class="song-number">21</span>
-        <h2 class="song-title-text">Thaitai Hudda Mor Ti</h2>
-        <span class="song-credit-text">Lyrics: Remo Singh</span>
-        <div class="song-row-actions">
-          <a href="#" class="btn-song-action" target="_blank" rel="noopener noreferrer">Listen Now</a>
-          <a href="#" class="btn-song-action btn-watch" target="_blank" rel="noopener noreferrer">Watch</a>
-        </div>
-      </article>
-
-      <!-- Track 22 -->
-      <article class="song-row">
-        <span class="song-number">22</span>
-        <h2 class="song-title-text">Morgoi Nagoi Ti</h2>
-        <span class="song-credit-text">Lyrics: Remo Singh</span>
-        <div class="song-row-actions">
-          <a href="#" class="btn-song-action" target="_blank" rel="noopener noreferrer">Listen Now</a>
-          <a href="#" class="btn-song-action btn-watch" target="_blank" rel="noopener noreferrer">Watch</a>
-        </div>
-      </article>
-
-      <!-- Track 23 -->
-      <article class="song-row">
-        <span class="song-number">23</span>
-        <h2 class="song-title-text">Thaiile Ti Kumpеy</h2>
-        <span class="song-credit-text">Lyrics: Remo Singh</span>
-        <div class="song-row-actions">
-          <a href="#" class="btn-song-action" target="_blank" rel="noopener noreferrer">Listen Now</a>
-          <a href="#" class="btn-song-action btn-watch" target="_blank" rel="noopener noreferrer">Watch</a>
-        </div>
-      </article>
-
-      <!-- Track 24 -->
-      <article class="song-row">
-        <span class="song-number">24</span>
-        <h2 class="song-title-text">Asha Nai</h2>
-        <span class="song-credit-text">Lyrics: Remo Singh</span>
-        <div class="song-row-actions">
-          <a href="#" class="btn-song-action" target="_blank" rel="noopener noreferrer">Listen Now</a>
-          <a href="#" class="btn-song-action btn-watch" target="_blank" rel="noopener noreferrer">Watch</a>
-        </div>
-      </article>
-
-      <!-- Track 25 -->
-      <article class="song-row">
-        <span class="song-number">25</span>
-        <h2 class="song-title-text">Jauriga Nai Beliya</h2>
-        <span class="song-credit-text">Lyrics: Remo Singh</span>
-        <div class="song-row-actions">
-          <a href="#" class="btn-song-action" target="_blank" rel="noopener noreferrer">Listen Now</a>
-          <a href="#" class="btn-song-action btn-watch" target="_blank" rel="noopener noreferrer">Watch</a>
-        </div>
-      </article>
-
-      <!-- Track 26 -->
-      <article class="song-row">
-        <span class="song-number">26</span>
-        <h2 class="song-title-text">Aaji Dehiya Tore</h2>
-        <span class="song-credit-text">Lyrics: Remo Singh</span>
-        <div class="song-row-actions">
-          <a href="#" class="btn-song-action" target="_blank" rel="noopener noreferrer">Listen Now</a>
-          <a href="#" class="btn-song-action btn-watch" target="_blank" rel="noopener noreferrer">Watch</a>
-        </div>
-      </article>
-
-      <!-- Track 27 -->
-      <article class="song-row">
-        <span class="song-number">27</span>
-        <h2 class="song-title-text">T Naile</h2>
-        <span class="song-credit-text">Lyrics: Remo Singh</span>
-        <div class="song-row-actions">
-          <a href="#" class="btn-song-action" target="_blank" rel="noopener noreferrer">Listen Now</a>
-          <a href="#" class="btn-song-action btn-watch" target="_blank" rel="noopener noreferrer">Watch</a>
-        </div>
-      </article>
-
-      <!-- Track 28 -->
-      <article class="song-row">
-        <span class="song-number">28</span>
-        <h2 class="song-title-text">Banar Yaari</h2>
-        <span class="song-credit-text">Lyrics: Remo Singh</span>
-        <div class="song-row-actions">
-          <a href="#" class="btn-song-action" target="_blank" rel="noopener noreferrer">Listen Now</a>
-          <a href="#" class="btn-song-action btn-watch" target="_blank" rel="noopener noreferrer">Watch</a>
-        </div>
-      </article>
-
-      <!-- Track 29 -->
-      <article class="song-row">
-        <span class="song-number">29</span>
-        <h2 class="song-title-text">Nais Durey Durey</h2>
-        <span class="song-credit-text">Lyrics: Remo Singh</span>
-        <div class="song-row-actions">
-          <a href="#" class="btn-song-action" target="_blank" rel="noopener noreferrer">Listen Now</a>
-          <a href="#" class="btn-song-action btn-watch" target="_blank" rel="noopener noreferrer">Watch</a>
-        </div>
-      </article>
-
-      <!-- Track 30 -->
-      <article class="song-row">
-        <span class="song-number">30</span>
-        <h2 class="song-title-text">Morgoi Nagoi Ti</h2>
-        <span class="song-credit-text">Lyrics: Remo Singh</span>
-        <div class="song-row-actions">
-          <a href="#" class="btn-song-action" target="_blank" rel="noopener noreferrer">Listen Now</a>
-          <a href="#" class="btn-song-action btn-watch" target="_blank" rel="noopener noreferrer">Watch</a>
-        </div>
-      </article>
-
-      <!-- Track 31 -->
-      <article class="song-row">
-        <span class="song-number">31</span>
-        <h2 class="song-title-text">Maya Ti</h2>
-        <span class="song-credit-text">Lyrics: Remo Singh</span>
-        <div class="song-row-actions">
-          <a href="#" class="btn-song-action" target="_blank" rel="noopener norefe
+    closeBtn.addEventListener("click", closeLyrics);
+    backdrop.addEventListener("click", (e) => {
+      if (e.target === backdrop) closeLyrics();
+    });
+  </script>
+</body>
+</html>
