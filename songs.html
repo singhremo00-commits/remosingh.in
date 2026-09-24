@@ -11,6 +11,14 @@
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://remosingh.in/songs.html">
 
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://remosingh.in/songs.html">
+  <meta property="og:title" content="All Songs | Remo Singh">
+  <meta property="og:description" content="34 original compositions written and performed by Remo Singh.">
+  <meta property="og:image" content="https://remosingh.in/images/Remo%20singh.jpg">
+  <meta property="og:site_name" content="Remo Singh">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
@@ -19,7 +27,7 @@
 <body>
 
   <header class="site-header">
-    <a href="index.html" class="brand-link">Remo Singh</a>
+    <a href="index.html" class="brand-link" aria-label="Remo Singh Home">Remo Singh</a>
     <button class="menu-trigger" id="menuTrigger" aria-label="Open menu">
       <span>Menu</span>
       <div class="menu-icon-bars"><span></span><span></span></div>
@@ -27,7 +35,7 @@
   </header>
 
   <div class="menu-overlay" id="menuOverlay">
-    <button class="menu-close-btn" id="menuClose">&times;</button>
+    <button class="menu-close-btn" id="menuClose" aria-label="Close menu">&times;</button>
     <nav>
       <ul class="overlay-nav-list">
         <li><a href="index.html" class="overlay-nav-link">Home</a></li>
@@ -67,6 +75,8 @@
     <p>&copy; 2026 Remo Singh. All rights reserved.</p>
   </footer>
 
+  <!-- Scripts Connection (lyrics.js load hone ke baad script.js chalega) -->
+  <script src="lyrics.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
