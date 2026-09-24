@@ -5,7 +5,27 @@ const songLyricsMap = {
   `,
 
   "Raati 2": `
-(Raati 2 ke bol yahan paste karein)
+(Raati hojak a thawri
+Tor nigshing me
+Ghume ahi jipeyle
+Ahir munghe t ahuri
+
+Kisade shambatlu more me
+Mon bhujani naruri
+Charibarade cheyle tore 
+Me dehuri
+
+Raati hojak a thawri
+Tor nigshing me
+Ghume ahi jipeyle
+Ahir munghe t ahuri
+
+Ayne t thayly basiya
+Thana na naruri kiya 
+T sara khanippa
+
+Na babesilu me t oytai durey
+Akkhulago more thoya habita pahurtai)
   `,
 
   "Nigshing Owri": `
