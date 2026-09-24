@@ -11,14 +11,6 @@
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://remosingh.in/songs.html">
 
-  <!-- Open Graph -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://remosingh.in/songs.html">
-  <meta property="og:title" content="All Songs | Remo Singh">
-  <meta property="og:description" content="34 original compositions written and performed by Remo Singh.">
-  <meta property="og:image" content="https://remosingh.in/images/Remo%20singh.jpg">
-  <meta property="og:site_name" content="Remo Singh">
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
@@ -27,7 +19,7 @@
 <body>
 
   <header class="site-header">
-    <a href="index.html" class="brand-link" aria-label="Remo Singh Home">Remo Singh</a>
+    <a href="index.html" class="brand-link">Remo Singh</a>
     <button class="menu-trigger" id="menuTrigger" aria-label="Open menu">
       <span>Menu</span>
       <div class="menu-icon-bars"><span></span><span></span></div>
@@ -35,7 +27,7 @@
   </header>
 
   <div class="menu-overlay" id="menuOverlay">
-    <button class="menu-close-btn" id="menuClose" aria-label="Close menu">&times;</button>
+    <button class="menu-close-btn" id="menuClose">&times;</button>
     <nav>
       <ul class="overlay-nav-list">
         <li><a href="index.html" class="overlay-nav-link">Home</a></li>
@@ -55,28 +47,474 @@
       <p class="page-subtitle">34 original compositions written and performed by Remo Singh.</p>
     </div>
 
-    <!-- 34 Songs List Container -->
-    <div class="songs-container" id="songsList"></div>
-  </main>
-
-  <!-- Mobile Bottom Sheet / Modal for Lyrics -->
-  <div class="lyrics-modal-backdrop" id="lyricsBackdrop">
-    <div class="lyrics-sheet" role="dialog" aria-modal="true">
-      <div class="sheet-handle"></div>
-      <div class="sheet-header">
-        <h3 class="sheet-title" id="lyricsTitle">Song Title</h3>
-        <button class="sheet-close" id="lyricsCloseBtn" aria-label="Close">&times;</button>
+    <div class="songs-container">
+      <!-- 01 -->
+      <div class="song-card">
+        <div class="song-meta">
+          <span class="song-num">01</span>
+          <div class="song-info">
+            <h4 class="song-title">Raati</h4>
+            <div class="song-author">Lyrics: Remo Singh</div>
+          </div>
+        </div>
+        <div class="song-actions">
+          <a href="#" class="btn-action btn-listen" target="_blank" rel="noopener">Listen Now</a>
+          <button class="btn-action btn-lyrics" onclick="showLyricsModal('Raati')">Lyrics</button>
+        </div>
       </div>
-      <div class="sheet-body" id="lyricsContent"></div>
-    </div>
-  </div>
 
-  <footer>
-    <p>&copy; 2026 Remo Singh. All rights reserved.</p>
-  </footer>
+      <!-- 02 -->
+      <div class="song-card">
+        <div class="song-meta">
+          <span class="song-num">02</span>
+          <div class="song-info">
+            <h4 class="song-title">Raati 2</h4>
+            <div class="song-author">Lyrics: Remo Singh</div>
+          </div>
+        </div>
+        <div class="song-actions">
+          <a href="#" class="btn-action btn-listen" target="_blank" rel="noopener">Listen Now</a>
+          <button class="btn-action btn-lyrics" onclick="showLyricsModal('Raati 2')">Lyrics</button>
+        </div>
+      </div>
 
-  <!-- Scripts Connection (lyrics.js load hone ke baad script.js chalega) -->
-  <script src="lyrics.js"></script>
-  <script src="script.js"></script>
-</body>
-</html>
+      <!-- 03 -->
+      <div class="song-card">
+        <div class="song-meta">
+          <span class="song-num">03</span>
+          <div class="song-info">
+            <h4 class="song-title">Nigshing Owri</h4>
+            <div class="song-author">Lyrics: Remo Singh</div>
+          </div>
+        </div>
+        <div class="song-actions">
+          <a href="#" class="btn-action btn-listen" target="_blank" rel="noopener">Listen Now</a>
+          <button class="btn-action btn-lyrics" onclick="showLyricsModal('Nigshing Owri')">Lyrics</button>
+        </div>
+      </div>
+
+      <!-- 04 -->
+      <div class="song-card">
+        <div class="song-meta">
+          <span class="song-num">04</span>
+          <div class="song-info">
+            <h4 class="song-title">T Sara Nai</h4>
+            <div class="song-author">Lyrics: Remo Singh</div>
+          </div>
+        </div>
+        <div class="song-actions">
+          <a href="#" class="btn-action btn-listen" target="_blank" rel="noopener">Listen Now</a>
+          <button class="btn-action btn-lyrics" onclick="showLyricsModal('T Sara Nai')">Lyrics</button>
+        </div>
+      </div>
+
+      <!-- 05 -->
+      <div class="song-card">
+        <div class="song-meta">
+          <span class="song-num">05</span>
+          <div class="song-info">
+            <h4 class="song-title">T Sara Nai 2</h4>
+            <div class="song-author">Lyrics: Remo Singh</div>
+          </div>
+        </div>
+        <div class="song-actions">
+          <a href="#" class="btn-action btn-listen" target="_blank" rel="noopener">Listen Now</a>
+          <button class="btn-action btn-lyrics" onclick="showLyricsModal('T Sara Nai 2')">Lyrics</button>
+        </div>
+      </div>
+
+      <!-- 06 -->
+      <div class="song-card">
+        <div class="song-meta">
+          <span class="song-num">06</span>
+          <div class="song-info">
+            <h4 class="song-title">Aji Tore Peya</h4>
+            <div class="song-author">Lyrics: Remo Singh</div>
+          </div>
+        </div>
+        <div class="song-actions">
+          <a href="#" class="btn-action btn-listen" target="_blank" rel="noopener">Listen Now</a>
+          <button class="btn-action btn-lyrics" onclick="showLyricsModal('Aji Tore Peya')">Lyrics</button>
+        </div>
+      </div>
+
+      <!-- 07 -->
+      <div class="song-card">
+        <div class="song-meta">
+          <span class="song-num">07</span>
+          <div class="song-info">
+            <h4 class="song-title">Ahesile</h4>
+            <div class="song-author">Lyrics: Remo Singh</div>
+          </div>
+        </div>
+        <div class="song-actions">
+          <a href="#" class="btn-action btn-listen" target="_blank" rel="noopener">Listen Now</a>
+          <button class="btn-action btn-lyrics" onclick="showLyricsModal('Ahesile')">Lyrics</button>
+        </div>
+      </div>
+
+      <!-- 08 -->
+      <div class="song-card">
+        <div class="song-meta">
+          <span class="song-num">08</span>
+          <div class="song-info">
+            <h4 class="song-title">Khalkoruri</h4>
+            <div class="song-author">Lyrics: Remo Singh</div>
+          </div>
+        </div>
+        <div class="song-actions">
+          <a href="#" class="btn-action btn-listen" target="_blank" rel="noopener">Listen Now</a>
+          <button class="btn-action btn-lyrics" onclick="showLyricsModal('Khalkoruri')">Lyrics</button>
+        </div>
+      </div>
+
+      <!-- 09 -->
+      <div class="song-card">
+        <div class="song-meta">
+          <span class="song-num">09</span>
+          <div class="song-info">
+            <h4 class="song-title">Monor Dairy</h4>
+            <div class="song-author">Lyrics: Remo Singh</div>
+          </div>
+        </div>
+        <div class="song-actions">
+          <a href="#" class="btn-action btn-listen" target="_blank" rel="noopener">Listen Now</a>
+          <button class="btn-action btn-lyrics" onclick="showLyricsModal('Monor Dairy')">Lyrics</button>
+        </div>
+      </div>
+
+      <!-- 10 -->
+      <div class="song-card">
+        <div class="song-meta">
+          <span class="song-num">10</span>
+          <div class="song-info">
+            <h4 class="song-title">Monor Yaari</h4>
+            <div class="song-author">Lyrics: Remo Singh</div>
+          </div>
+        </div>
+        <div class="song-actions">
+          <a href="#" class="btn-action btn-listen" target="_blank" rel="noopener">Listen Now</a>
+          <button class="btn-action btn-lyrics" onclick="showLyricsModal('Monor Yaari')">Lyrics</button>
+        </div>
+      </div>
+
+      <!-- 11 -->
+      <div class="song-card">
+        <div class="song-meta">
+          <span class="song-num">11</span>
+          <div class="song-info">
+            <h4 class="song-title">Tor Sale</h4>
+            <div class="song-author">Lyrics: Remo Singh</div>
+          </div>
+        </div>
+        <div class="song-actions">
+          <a href="#" class="btn-action btn-listen" target="_blank" rel="noopener">Listen Now</a>
+          <button class="btn-action btn-lyrics" onclick="showLyricsModal('Tor Sale')">Lyrics</button>
+        </div>
+      </div>
+
+      <!-- 12 -->
+      <div class="song-card">
+        <div class="song-meta">
+          <span class="song-num">12</span>
+          <div class="song-info">
+            <h4 class="song-title">Nais Durey Durey</h4>
+            <div class="song-author">Lyrics: Remo Singh</div>
+          </div>
+        </div>
+        <div class="song-actions">
+          <a href="#" class="btn-action btn-listen" target="_blank" rel="noopener">Listen Now</a>
+          <button class="btn-action btn-lyrics" onclick="showLyricsModal('Nais Durey Durey')">Lyrics</button>
+        </div>
+      </div>
+
+      <!-- 13 -->
+      <div class="song-card">
+        <div class="song-meta">
+          <span class="song-num">13</span>
+          <div class="song-info">
+            <h4 class="song-title">Hopon</h4>
+            <div class="song-author">Lyrics: Remo Singh</div>
+          </div>
+        </div>
+        <div class="song-actions">
+          <a href="#" class="btn-action btn-listen" target="_blank" rel="noopener">Listen Now</a>
+          <button class="btn-action btn-lyrics" onclick="showLyricsModal('Hopon')">Lyrics</button>
+        </div>
+      </div>
+
+      <!-- 14 -->
+      <div class="song-card">
+        <div class="song-meta">
+          <span class="song-num">14</span>
+          <div class="song-info">
+            <h4 class="song-title">Ti</h4>
+            <div class="song-author">Lyrics: Remo Singh</div>
+          </div>
+        </div>
+        <div class="song-actions">
+          <a href="#" class="btn-action btn-listen" target="_blank" rel="noopener">Listen Now</a>
+          <button class="btn-action btn-lyrics" onclick="showLyricsModal('Ti')">Lyrics</button>
+        </div>
+      </div>
+
+      <!-- 15 -->
+      <div class="song-card">
+        <div class="song-meta">
+          <span class="song-num">15</span>
+          <div class="song-info">
+            <h4 class="song-title">Ti 2</h4>
+            <div class="song-author">Lyrics: Remo Singh</div>
+          </div>
+        </div>
+        <div class="song-actions">
+          <a href="#" class="btn-action btn-listen" target="_blank" rel="noopener">Listen Now</a>
+          <button class="btn-action btn-lyrics" onclick="showLyricsModal('Ti 2')">Lyrics</button>
+        </div>
+      </div>
+
+      <!-- 16 -->
+      <div class="song-card">
+        <div class="song-meta">
+          <span class="song-num">16</span>
+          <div class="song-info">
+            <h4 class="song-title">Banar Moyango</h4>
+            <div class="song-author">Lyrics: Remo Singh</div>
+          </div>
+        </div>
+        <div class="song-actions">
+          <a href="#" class="btn-action btn-listen" target="_blank" rel="noopener">Listen Now</a>
+          <button class="btn-action btn-lyrics" onclick="showLyricsModal('Banar Moyango')">Lyrics</button>
+        </div>
+      </div>
+
+      <!-- 17 -->
+      <div class="song-card">
+        <div class="song-meta">
+          <span class="song-num">17</span>
+          <div class="song-info">
+            <h4 class="song-title">Thawri Impani Oya</h4>
+            <div class="song-author">Lyrics: Remo Singh</div>
+          </div>
+        </div>
+        <div class="song-actions">
+          <a href="#" class="btn-action btn-listen" target="_blank" rel="noopener">Listen Now</a>
+          <button class="btn-action btn-lyrics" onclick="showLyricsModal('Thawri Impani Oya')">Lyrics</button>
+        </div>
+      </div>
+
+      <!-- 18 -->
+      <div class="song-card">
+        <div class="song-meta">
+          <span class="song-num">18</span>
+          <div class="song-info">
+            <h4 class="song-title">Nigisga Durey</h4>
+            <div class="song-author">Lyrics: Remo Singh</div>
+          </div>
+        </div>
+        <div class="song-actions">
+          <a href="#" class="btn-action btn-listen" target="_blank" rel="noopener">Listen Now</a>
+          <button class="btn-action btn-lyrics" onclick="showLyricsModal('Nigisga Durey')">Lyrics</button>
+        </div>
+      </div>
+
+      <!-- 19 -->
+      <div class="song-card">
+        <div class="song-meta">
+          <span class="song-num">19</span>
+          <div class="song-info">
+            <h4 class="song-title">Nai Kuno Bana</h4>
+            <div class="song-author">Lyrics: Remo Singh</div>
+          </div>
+        </div>
+        <div class="song-actions">
+          <a href="#" class="btn-action btn-listen" target="_blank" rel="noopener">Listen Now</a>
+          <button class="btn-action btn-lyrics" onclick="showLyricsModal('Nai Kuno Bana')">Lyrics</button>
+        </div>
+      </div>
+
+      <!-- 20 -->
+      <div class="song-card">
+        <div class="song-meta">
+          <span class="song-num">20</span>
+          <div class="song-info">
+            <h4 class="song-title">Nai Kuno Bana 2</h4>
+            <div class="song-author">Lyrics: Remo Singh</div>
+          </div>
+        </div>
+        <div class="song-actions">
+          <a href="#" class="btn-action btn-listen" target="_blank" rel="noopener">Listen Now</a>
+          <button class="btn-action btn-lyrics" onclick="showLyricsModal('Nai Kuno Bana 2')">Lyrics</button>
+        </div>
+      </div>
+
+      <!-- 21 -->
+      <div class="song-card">
+        <div class="song-meta">
+          <span class="song-num">21</span>
+          <div class="song-info">
+            <h4 class="song-title">Thaitai Hudda Mor Ti</h4>
+            <div class="song-author">Lyrics: Remo Singh</div>
+          </div>
+        </div>
+        <div class="song-actions">
+          <a href="#" class="btn-action btn-listen" target="_blank" rel="noopener">Listen Now</a>
+          <button class="btn-action btn-lyrics" onclick="showLyricsModal('Thaitai Hudda Mor Ti')">Lyrics</button>
+        </div>
+      </div>
+
+      <!-- 22 -->
+      <div class="song-card">
+        <div class="song-meta">
+          <span class="song-num">22</span>
+          <div class="song-info">
+            <h4 class="song-title">Morgoi Nagoi Ti</h4>
+            <div class="song-author">Lyrics: Remo Singh</div>
+          </div>
+        </div>
+        <div class="song-actions">
+          <a href="#" class="btn-action btn-listen" target="_blank" rel="noopener">Listen Now</a>
+          <button class="btn-action btn-lyrics" onclick="showLyricsModal('Morgoi Nagoi Ti')">Lyrics</button>
+        </div>
+      </div>
+
+      <!-- 23 -->
+      <div class="song-card">
+        <div class="song-meta">
+          <span class="song-num">23</span>
+          <div class="song-info">
+            <h4 class="song-title">Thaile Ti Kumpey</h4>
+            <div class="song-author">Lyrics: Remo Singh</div>
+          </div>
+        </div>
+        <div class="song-actions">
+          <a href="#" class="btn-action btn-listen" target="_blank" rel="noopener">Listen Now</a>
+          <button class="btn-action btn-lyrics" onclick="showLyricsModal('Thaile Ti Kumpey')">Lyrics</button>
+        </div>
+      </div>
+
+      <!-- 24 -->
+      <div class="song-card">
+        <div class="song-meta">
+          <span class="song-num">24</span>
+          <div class="song-info">
+            <h4 class="song-title">Asha Nai</h4>
+            <div class="song-author">Lyrics: Remo Singh</div>
+          </div>
+        </div>
+        <div class="song-actions">
+          <a href="#" class="btn-action btn-listen" target="_blank" rel="noopener">Listen Now</a>
+          <button class="btn-action btn-lyrics" onclick="showLyricsModal('Asha Nai')">Lyrics</button>
+        </div>
+      </div>
+
+      <!-- 25 -->
+      <div class="song-card">
+        <div class="song-meta">
+          <span class="song-num">25</span>
+          <div class="song-info">
+            <h4 class="song-title">Jauriga Nai Beliya</h4>
+            <div class="song-author">Lyrics: Remo Singh</div>
+          </div>
+        </div>
+        <div class="song-actions">
+          <a href="#" class="btn-action btn-listen" target="_blank" rel="noopener">Listen Now</a>
+          <button class="btn-action btn-lyrics" onclick="showLyricsModal('Jauriga Nai Beliya')">Lyrics</button>
+        </div>
+      </div>
+
+      <!-- 26 -->
+      <div class="song-card">
+        <div class="song-meta">
+          <span class="song-num">26</span>
+          <div class="song-info">
+            <h4 class="song-title">Aaji Dehiya Tore</h4>
+            <div class="song-author">Lyrics: Remo Singh</div>
+          </div>
+        </div>
+        <div class="song-actions">
+          <a href="#" class="btn-action btn-listen" target="_blank" rel="noopener">Listen Now</a>
+          <button class="btn-action btn-lyrics" onclick="showLyricsModal('Aaji Dehiya Tore')">Lyrics</button>
+        </div>
+      </div>
+
+      <!-- 27 -->
+      <div class="song-card">
+        <div class="song-meta">
+          <span class="song-num">27</span>
+          <div class="song-info">
+            <h4 class="song-title">T Naile</h4>
+            <div class="song-author">Lyrics: Remo Singh</div>
+          </div>
+        </div>
+        <div class="song-actions">
+          <a href="#" class="btn-action btn-listen" target="_blank" rel="noopener">Listen Now</a>
+          <button class="btn-action btn-lyrics" onclick="showLyricsModal('T Naile')">Lyrics</button>
+        </div>
+      </div>
+
+      <!-- 28 -->
+      <div class="song-card">
+        <div class="song-meta">
+          <span class="song-num">28</span>
+          <div class="song-info">
+            <h4 class="song-title">Banar Yaari</h4>
+            <div class="song-author">Lyrics: Remo Singh</div>
+          </div>
+        </div>
+        <div class="song-actions">
+          <a href="#" class="btn-action btn-listen" target="_blank" rel="noopener">Listen Now</a>
+          <button class="btn-action btn-lyrics" onclick="showLyricsModal('Banar Yaari')">Lyrics</button>
+        </div>
+      </div>
+
+      <!-- 29 -->
+      <div class="song-card">
+        <div class="song-meta">
+          <span class="song-num">29</span>
+          <div class="song-info">
+            <h4 class="song-title">Maya Ti</h4>
+            <div class="song-author">Lyrics: Remo Singh</div>
+          </div>
+        </div>
+        <div class="song-actions">
+          <a href="#" class="btn-action btn-listen" target="_blank" rel="noopener">Listen Now</a>
+          <button class="btn-action btn-lyrics" onclick="showLyricsModal('Maya Ti')">Lyrics</button>
+        </div>
+      </div>
+
+      <!-- 30 -->
+      <div class="song-card">
+        <div class="song-meta">
+          <span class="song-num">30</span>
+          <div class="song-info">
+            <h4 class="song-title">Gussa Na Ho</h4>
+            <div class="song-author">Lyrics: Remo Singh</div>
+          </div>
+        </div>
+        <div class="song-actions">
+          <a href="#" class="btn-action btn-listen" target="_blank" rel="noopener">Listen Now</a>
+          <button class="btn-action btn-lyrics" onclick="showLyricsModal('Gussa Na Ho')">Lyrics</button>
+        </div>
+      </div>
+
+      <!-- 31 -->
+      <div class="song-card">
+        <div class="song-meta">
+          <span class="song-num">31</span>
+          <div class="song-info">
+            <h4 class="song-title">Monor D</h4>
+            <div class="song-author">Lyrics: Remo Singh</div>
+          </div>
+        </div>
+        <div class="song-actions">
+          <a href="#" class="btn-action btn-listen" target="_blank" rel="noopener">Listen Now</a>
+          <button class="btn-action btn-lyrics" onclick="showLyricsModal('Monor D')">Lyrics</button>
+        </div>
+      </div>
+
+      <!-- 32 -->
+      <div class="song-card">
+        <div class="song-meta">
+          <span class="song-num">32</span>
+          <div c
