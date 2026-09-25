@@ -6,7 +6,17 @@
   <title>Remo Singh Content Manager</title>
 </head>
 <body>
-  <!-- Decap CMS Core Engine -->
+  <!-- Decap CMS Script -->
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+  <script>
+    // Agar token saved nahi hai toh popup maange
+    if (!localStorage.getItem('decap-cms-user')) {
+      const token = prompt("Enter your GitHub Personal Access Token:");
+      if (token) {
+        localStorage.setItem('decap-cms-user', JSON.stringify({ token: token.trim(), backendName: 'github' }));
+        window.location.reload();
+      }
+    }
+  </script>
 </body>
 </html>
