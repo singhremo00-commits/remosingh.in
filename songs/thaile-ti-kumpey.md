@@ -3,7 +3,7 @@ layout: song
 title: "Thaile Ti Kumpey"
 permalink: /songs/thaile-ti-kumpey.html
 release_date: "2026-09-25"
-cover_art: "/Images/ThaileTiKumpey.png"
+cover_art: "/images/ThaileTiKumpey.jpg"
 genre: "Acoustic Pop"
 language: "Bishnupriya Manipuri"
 duration: "PT3M20S"
