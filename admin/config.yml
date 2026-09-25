@@ -2,6 +2,7 @@ backend:
   name: github
   repo: singhremo00-commits/remosingh.in
   branch: main
+  base_url: https://decap-cms-oauth.vercel.app
 
 media_folder: "images/uploads"
 public_folder: "/images/uploads"
