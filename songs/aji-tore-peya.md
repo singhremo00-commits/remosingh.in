@@ -3,7 +3,7 @@ layout: song
 title: "Aji Tore Peya"
 permalink: /songs/aji-tore-peya.html
 release_date: "2026-09-25"
-cover_art: "/Images/AjiTorePeya.png"
+cover_art: "/Images/AjiTorePeya.jpg"
 genre: "Acoustic Pop"
 language: "Bishnupriya Manipuri"
 duration: "PT3M20S"
