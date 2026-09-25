@@ -1,0 +1,29 @@
+---
+layout: default
+title: "All Songs & Discography"
+permalink: /music/
+---
+
+<div style="max-width: 900px; margin: 40px auto; padding: 0 20px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+  <h1 style="text-align: center; margin-bottom: 10px;">Music & Discography</h1>
+  <p style="text-align: center; color: #666; margin-bottom: 35px;">Official releases, credits, and verified lyrics.</p>
+
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 25px;">
+    {% for song in site.pages %}
+      {% if song.layout == 'song' %}
+        <div style="border: 1px solid #eee; border-radius: 14px; overflow: hidden; background: #fff; box-shadow: 0 4px 12px rgba(0,0,0,0.06); text-align: center; padding-bottom: 20px;">
+          {% if song.cover_art %}
+            <a href="{{ song.url | relative_url }}">
+              <img src="{{ song.cover_art }}" alt="{{ song.title }}" style="width: 100%; height: 260px; object-fit: cover; display: block;" />
+            </a>
+          {% endif %}
+          <h2 style="font-size: 20px; margin: 15px 12px 5px 12px;">
+            <a href="{{ song.url | relative_url }}" style="text-decoration: none; color: #111;">{{ song.title }}</a>
+          </h2>
+          <p style="color: #777; font-size: 14px; margin: 0 0 15px 0;">{{ song.genre }} • {{ song.release_date }}</p>
+          <a href="{{ song.url | relative_url }}" style="display: inline-block; padding: 8px 18px; background: #111; color: #fff; border-radius: 20px; text-decoration: none; font-size: 13px; font-weight: 600;">View Song & Lyrics &rarr;</a>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
