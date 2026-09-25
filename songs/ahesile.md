@@ -3,7 +3,7 @@ layout: song
 title: "Ahesile"
 permalink: /songs/ahesile.html
 release_date: "2026-09-25"
-cover_art: "/Images/Ahesile.jpg"
+cover_art: "/images/Ahesile.jpg"
 genre: "Acoustic Pop"
 language: "Bishnupriya Manipuri"
 duration: "PT3M20S"
