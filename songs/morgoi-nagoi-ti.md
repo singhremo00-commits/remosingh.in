@@ -3,7 +3,7 @@ layout: song
 title: "Morgoi Nagoi Ti"
 permalink: /songs/morgoi-nagoi-ti.html
 release_date: "2026-09-25"
-cover_art: "/Images/images/MorgoiNagoiTi.jpg"
+cover_art: "/Images/MorgoiNagoiTi.jpg"
 genre: "Acoustic Pop"
 language: "Bishnupriya Manipuri"
 duration: "PT3M20S"
