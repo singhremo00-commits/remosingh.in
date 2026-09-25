@@ -3,7 +3,7 @@ layout: song
 title: "Nigshing Owri"
 permalink: /songs/nigshing-owri.html
 release_date: "2026-09-25"
-cover_art: "/images/nigshing-owri.png"
+cover_art: "/images/nigshing-owri.jpg"
 genre: "Acoustic Pop"
 language: "Bishnupriya Manipuri"
 duration: "PT3M20S"
