@@ -75,7 +75,7 @@ layout: null
       font-size: 16px;
       font-weight: 600;
       color: #38bdf8;
-      margin-bottom: 12px;
+      margin-bottom: 14px;
       text-transform: uppercase;
       letter-spacing: 0.5px;
     }
@@ -83,20 +83,26 @@ layout: null
       font-size: 15px;
       color: #cbd5e1;
     }
+
+    /* Force 2-Column Grid on Mobile & Desktop */
     .credits-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-      gap: 12px;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 16px;
+      row-gap: 14px;
     }
     .credit-item span {
       display: block;
       font-size: 12px;
       color: #94a3b8;
+      margin-bottom: 2px;
     }
     .credit-item strong {
       font-size: 14px;
       color: #f8fafc;
+      word-break: break-word;
     }
+
     .lyrics-header {
       display: flex;
       justify-content: space-between;
@@ -187,11 +193,26 @@ layout: null
     <div class="song-section card-box">
       <h3>Official Credits</h3>
       <div class="credits-grid">
-        <div class="credit-item"><span>Vocals:</span> <strong>{{ page.singer }}</strong></div>
-        <div class="credit-item"><span>Lyrics:</span> <strong>{{ page.lyrics_by }}</strong></div>
-        <div class="credit-item"><span>Composer / Producer:</span> <strong>{{ page.composition }}</strong></div>
-        <div class="credit-item"><span>Genre:</span> <strong>{{ page.genre }}</strong></div>
-        <div class="credit-item"><span>Language:</span> <strong>{{ page.language }}</strong></div>
+        <div class="credit-item">
+          <span>Vocals:</span>
+          <strong>{{ page.singer }}</strong>
+        </div>
+        <div class="credit-item">
+          <span>Lyrics:</span>
+          <strong>{{ page.lyrics_by }}</strong>
+        </div>
+        <div class="credit-item">
+          <span>Composer / Producer:</span>
+          <strong>{{ page.composition }}</strong>
+        </div>
+        <div class="credit-item">
+          <span>Genre:</span>
+          <strong>{{ page.genre }}</strong>
+        </div>
+        <div class="credit-item">
+          <span>Language:</span>
+          <strong>{{ page.language }}</strong>
+        </div>
       </div>
     </div>
 
