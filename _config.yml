@@ -1,0 +1,4 @@
+title: Remo Singh
+url: "https://remosingh.in"
+permalink: /blog/:title/
+markdown: kramdown
