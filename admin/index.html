@@ -6,16 +6,48 @@
   <title>Remo Singh Content Manager</title>
 </head>
 <body>
-  <!-- Decap CMS Script -->
+  <!-- Decap CMS with Manual Init -->
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
   <script>
-    // Agar token saved nahi hai toh popup maange
-    if (!localStorage.getItem('decap-cms-user')) {
-      const token = prompt("Enter your GitHub Personal Access Token:");
+    let token = localStorage.getItem('gh_decap_token');
+    if (!token) {
+      token = prompt("Enter your GitHub Personal Access Token (ghp_...):");
       if (token) {
-        localStorage.setItem('decap-cms-user', JSON.stringify({ token: token.trim(), backendName: 'github' }));
-        window.location.reload();
+        localStorage.setItem('gh_decap_token', token.trim());
       }
+    }
+
+    if (token) {
+      CMS.init({
+        config: {
+          backend: {
+            name: 'github',
+            repo: 'singhremo00-commits/remosingh.in',
+            branch: 'main',
+            token: token.trim()
+          },
+          load_config_file: false,
+          media_folder: 'images/uploads',
+          public_folder: '/images/uploads',
+          collections: [
+            {
+              name: 'blog',
+              label: 'Blog Posts',
+              folder: '_posts',
+              create: true,
+              slug: '{{year}}-{{month}}-{{day}}-{{slug}}',
+              fields: [
+                { label: 'Layout', name: 'layout', widget: 'hidden', default: 'post' },
+                { label: 'Post Title', name: 'title', widget: 'string' },
+                { label: 'Publish Date', name: 'date', widget: 'datetime' },
+                { label: 'Short Description', name: 'description', widget: 'string' },
+                { label: 'Featured Image', name: 'thumbnail', widget: 'image', required: false },
+                { label: 'Article Body', name: 'body', widget: 'markdown' }
+              ]
+            }
+          ]
+        }
+      });
     }
   </script>
 </body>
