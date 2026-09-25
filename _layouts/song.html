@@ -10,16 +10,118 @@ layout: null
   <meta name="description" content="{{ page.description | default: 'Read official lyrics, credits, and details for ' | append: page.title | append: ' by Remo Singh.' }}">
   <link rel="canonical" href="https://remosingh.in{{ page.permalink }}">
 
-  <!-- Open Graph / Social Meta -->
+  <!-- Open Graph / Meta -->
   <meta property="og:type" content="music.song">
   <meta property="og:title" content="{{ page.title }} | Remo Singh">
   <meta property="og:description" content="{{ page.description }}">
   <meta property="og:image" content="https://remosingh.in{{ page.cover_art }}">
   <meta property="og:url" content="https://remosingh.in{{ page.permalink }}">
 
-  <link rel="stylesheet" href="/style.css">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: #0f1115;
+      color: #e2e8f0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.6;
+      padding: 20px 15px;
+    }
+    .song-container {
+      max-width: 650px;
+      margin: 0 auto;
+    }
+    .back-btn {
+      display: inline-block;
+      color: #94a3b8;
+      text-decoration: none;
+      font-size: 14px;
+      margin-bottom: 20px;
+      font-weight: 500;
+    }
+    .song-hero {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+    .song-cover-wrapper {
+      max-width: 280px;
+      margin: 0 auto 18px;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    }
+    .song-cover-img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .song-title {
+      font-size: 26px;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 6px;
+    }
+    .song-subtitle {
+      font-size: 14px;
+      color: #94a3b8;
+    }
+    .card-box {
+      background: #181b22;
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 12px;
+      padding: 18px 20px;
+      margin-bottom: 18px;
+    }
+    .card-box h3 {
+      font-size: 16px;
+      font-weight: 600;
+      color: #38bdf8;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .card-box p {
+      font-size: 15px;
+      color: #cbd5e1;
+    }
+    .credits-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 12px;
+    }
+    .credit-item span {
+      display: block;
+      font-size: 12px;
+      color: #94a3b8;
+    }
+    .credit-item strong {
+      font-size: 14px;
+      color: #f8fafc;
+    }
+    .lyrics-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 14px;
+    }
+    .lyrics-content {
+      font-size: 16px;
+      line-height: 1.8;
+      color: #f1f5f9;
+      white-space: pre-wrap;
+    }
+    #copyLyricsBtn {
+      background: rgba(255,255,255,0.08);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.2);
+      padding: 6px 14px;
+      border-radius: 6px;
+      font-size: 12px;
+      cursor: pointer;
+      font-weight: 500;
+    }
+  </style>
 
-  <!-- Ultra-Advanced AI & Google Knowledge Graph JSON-LD Schema -->
+  <!-- Google & AI Knowledge Graph Schema -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -39,10 +141,8 @@ layout: null
       "name": "Remo Singh",
       "url": "https://remosingh.in",
       "sameAs": [
-        "https://open.spotify.com/artist/YOUR_SPOTIFY_ID",
-        "https://music.apple.com/artist/YOUR_APPLE_ID",
-        "https://www.youtube.com/@remosingh",
-        "https://instagram.com/remosingh"
+        "https://share.google/n715qfgpnlEDeYglV",
+        "https://www.youtube.com/@remosingh"
       ]
     },
     "recordingOf": {
@@ -96,13 +196,11 @@ layout: null
     </div>
 
     <div class="song-section card-box lyrics-box">
-      <div class="lyrics-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+      <div class="lyrics-header">
         <h3 style="margin: 0;">Official Lyrics</h3>
-        <button id="copyLyricsBtn" onclick="copyLyrics()" style="background: rgba(255,255,255,0.08); color: #fff; border: 1px solid rgba(255,255,255,0.2); padding: 6px 12px; border-radius: 6px; font-size: 13px; cursor: pointer;">Copy Lyrics</button>
+        <button id="copyLyricsBtn" onclick="copyLyrics()">Copy Lyrics</button>
       </div>
-      <div class="lyrics-content" id="lyricsText">
-        {{ content }}
-      </div>
+      <div class="lyrics-content" id="lyricsText">{{ content }}</div>
     </div>
   </div>
 
