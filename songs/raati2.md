@@ -1,7 +1,8 @@
 ---
 layout: song
 title: "Raati 2"
-permalink: /songs/raati-2/
+permalink: /songs/raati-2.html
+
 release_date: "2026-09-25"
 cover_art: "/images/raati2.png
 "
