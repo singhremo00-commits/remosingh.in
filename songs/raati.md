@@ -2,7 +2,7 @@
 layout: song
 title: "Raati"
 permalink: /songs/raati/
-release_date: "2026-09-25"
+release_date: "2017-09-25"
 cover_art: "https://your-image-url-link.jpg"
 genre: "Acoustic Pop"
 language: "Bishnupriya Manipuri"
