@@ -1,0 +1,22 @@
+backend:
+  name: github
+  repo: Bikramsinha/remosingh.in # Agar aapki repo ka naam alag hai toh username/repo yahan likhein
+  branch: main # Default branch (agar master hai toh master likhein)
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "blog"
+    label: "Blog Posts"
+    folder: "_posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Layout", name: "layout", widget: "hidden", default: "post" }
+      - { label: "Post Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Short Description (SEO & AI Summary)", name: "description", widget: "string" }
+      - { label: "Featured Image / Poster", name: "thumbnail", widget: "image", required: false }
+      - { label: "Article Body", name: "body", widget: "markdown" }
+      
