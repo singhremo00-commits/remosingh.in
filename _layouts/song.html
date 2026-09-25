@@ -55,6 +55,9 @@
       border-radius: 16px;
       box-shadow: 0 8px 30px rgba(0,0,0,0.5);
       margin-bottom: 20px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
     }
     h1 {
       font-size: 28px;
@@ -127,7 +130,7 @@
 
     <header>
       {% if page.cover_art %}
-        <img src="{{ page.cover_art }}" alt="{{ page.title }}" class="cover-img" />
+        <img src="{{ page.cover_art | relative_url }}" alt="{{ page.title }}" class="cover-img" />
       {% endif %}
       <h1>{{ page.title }}</h1>
       <p class="subhead">By <strong>Remo Singh</strong> • Released: {{ page.release_date }}</p>
