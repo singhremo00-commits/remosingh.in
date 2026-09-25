@@ -13,4 +13,32 @@ lyrics_by: "Remo Singh"
 composition: "Remo Singh"
 ---
 
-*Lyrics coming soon... Stay tuned!*
+Thauri impaniya<br>
+Tore khalkoriya<br>
+T aytai e e buliya ||<br>
+<br>
+Kiya nauri ti<br>
+Hmmm hm hm<br>
+Kiya nauri ti<br>
+Thaylu tore<br>
+Basiya Akhula..<br>
+<br>
+Thauri impaniya<br>
+Tore khalkoriya<br>
+T aytai e e buliya ||<br>
+<br>
+Nigshing oytai<br>
+Akdin more<br>
+Aytai ti<br>
+Bisareya ||<br>
+<br>
+Napeytai bisareya<br>
+More ti a malema ||<br>
+Mor naghan doriya daktei<br>
+Napeytai more bisareya ||<br>
+<br>
+Thauri impaniya<br>
+Tore khalkoriya<br>
+T aytai e e buliya ||<br>
+<br>
+Ayne thaylu tore basiya ||
