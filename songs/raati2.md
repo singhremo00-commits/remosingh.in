@@ -13,26 +13,34 @@ lyrics_by: "Remo Singh"
 composition: "Remo Singh"
 ---
 
-Raati hojak a thamri<br>
-Tor nigshing me<br>
-Ghume nhi jipeyle<br>
-Ahir nunghe t ahuri<br>
+Raati hojak a thauri<br>
+tor nigshing a me<br>
+Ghum a ahi jipeyle<br>
+ahir munghe t ahur<br>
 <br>
-Kisade shambotlu more ne<br>
-Mok bhujani naruri<br>
-Charibarade cheyle tore<br>
-Ne dehuri<br>
+Kisade samaltu more me<br>
+Mon bhujani naruri,<br>
+Charibarade cheyle tore me dehuri..<br>
 <br>
-Raati hojak a thamri<br>
-Tor nigshing me<br>
-Ghume nhi jipeyle<br>
-Ahir nunghe t ahuri<br>
+Ayen ti thayle basiya<br>
+Tha na naruri kiya<br>
+T sara khanipa 2<br>
 <br>
-Ayne t thayly baotya<br>
-Thana na naruri kiya<br>
-T sara khanippa<br>
+Na babesilu me<br>
+Oytai durey buliya t<br>
+Akhulago more thoya<br>
+T habita pahurtai..<br>
 <br>
-Na babesilu me t oytai durey<br>
-Akkhulage more thoya habita pehurtai<br>
-Tor ashale ne hajasilu hopon habi<br>
-Habita bagediya t durey
+Tor ashalo me<br>
+Hajasilu hopon habi<br>
+Aaji Kiya j1auriga hapon bagediya..<br>
+Habitalo ti..<br>
+<br>
+Aji t nai mor muskhisi han loge nai<br>
+Aji t nai mor haroupa loge nai<br>
+<br>
+Ayen ti thayle basiya<br>
+<br>
+Ayen ti thayle basiya<br>
+Tha na naruri kiya<br>
+T sara khanipa 2
