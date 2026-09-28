@@ -1,7 +1,7 @@
 ---
 layout: song
 title: "Gussa Na Ho"
-permalink: /songs/gussa-na-ho.html
+permalink: /songs/gussa-na-ho/
 release_date: "2026-09-25"
 cover_art: "/Images/GussaNaHo.png"
 genre: "Indie Pop"
