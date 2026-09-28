@@ -1,7 +1,7 @@
 ---
 layout: song
 title: "Hopon"
-permalink: /songs/hopon.html
+permalink: /songs/hopon/
 release_date: "2026-09-25"
 cover_art: "/Images/Hopon.png"
 genre: "Acoustic Pop"
