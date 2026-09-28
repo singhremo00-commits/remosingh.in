@@ -1,7 +1,7 @@
 ---
 layout: song
 title: "Asha Nai"
-permalink: /songs/asha-nai.html
+permalink: /songs/asha-nai/
 release_date: "2026-09-25"
 cover_art: "/Images/AshaNai.png"
 genre: "Acoustic Pop"
