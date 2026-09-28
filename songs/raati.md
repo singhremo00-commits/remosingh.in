@@ -1,7 +1,7 @@
 ---
 layout: song
 title: "Raati"
-permalink: /songs/raati.html
+permalink: /songs/raati/
 release_date: "2017-09-25"
 cover_art: "/images/Raati.jpg"
 genre: "Acoustic Pop"
