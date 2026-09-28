@@ -1,10 +1,10 @@
 ---
 layout: song
 title: "Raati 2"
-permalink: /songs/raati-2.html
+permalink: /songs/raati-2/
 release_date: "2026-09-25"
 cover_art: "/images/raati2.jpg"
-genre: "Acoustic Pop"
+genre: "RNB"
 language: "Bishnupriya Manipuri"
 duration: "PT3M20S"
 description: "Raati 2 captures gentle acoustic melodies and emotional reflections by Remo Singh."
