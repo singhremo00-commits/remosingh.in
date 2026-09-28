@@ -1,7 +1,7 @@
 ---
 layout: song
 title: "T Sara Nai 2"
-permalink: /songs/t-sara-nai-2.html
+permalink: /songs/t-sara-nai-2/
 release_date: "2026-09-25"
 cover_art: "/Images/TSaraNai2.png"
 genre: "Acoustic Pop"
