@@ -1,10 +1,10 @@
 ---
 layout: song
 title: "Nigshing Owri"
-permalink: /songs/nigshing-owri.html
+permalink: /songs/nigshing-owri/
 release_date: "2026-09-25"
 cover_art: "/images/nigshing-owri.jpg"
-genre: "Acoustic Pop"
+genre: "RAP"
 language: "Bishnupriya Manipuri"
 duration: "PT3M20S"
 singer: "Remo Singh"
