@@ -1,7 +1,7 @@
 ---
 layout: song
 title: "T Naile"
-permalink: /songs/t-naile.html
+permalink: /songs/t-naile/
 release_date: "2026-09-25"
 cover_art: "/Images/TNaile.png"
 genre: "Acoustic Pop"
