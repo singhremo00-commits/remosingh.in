@@ -1,7 +1,7 @@
 ---
 layout: song
 title: "Aji Tore Peya"
-permalink: /songs/aji-tore-peya.html
+permalink: /songs/aji-tore-peya/
 release_date: "2026-09-25"
 cover_art: "/images/AjiTorePeya.jpg"
 genre: "Romantic"
