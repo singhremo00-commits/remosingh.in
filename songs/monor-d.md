@@ -1,7 +1,7 @@
 ---
 layout: song
 title: "Monor D"
-permalink: /songs/monor-d.html
+permalink: /songs/monor-d/
 release_date: "2026-09-25"
 cover_art: "/Images/MonorD.png"
 genre: "Acoustic Pop"
