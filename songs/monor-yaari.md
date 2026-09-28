@@ -1,7 +1,7 @@
 ---
 layout: song
 title: "Monor Yaari"
-permalink: /songs/monor-yaari.html
+permalink: /songs/monor-yaari/
 release_date: "2026-09-25"
 cover_art: "/Images/MonorYaari.png"
 genre: "Acoustic Pop"
