@@ -1,7 +1,7 @@
 ---
 layout: song
 title: "Ti 2"
-permalink: /songs/ti-2.html
+permalink: /songs/ti-2/
 release_date: "2026-09-25"
 cover_art: "/Images/Ti2.png"
 genre: "Acoustic Pop"
