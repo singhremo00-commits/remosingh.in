@@ -13,27 +13,36 @@ lyrics_by: "Remo Singh"
 composition: "Remo Singh"
 ---
 
-Aji tore peya mone koti harou ose<br>
-Mattu kisade mattu kisade<br>
+Aji tore peya 
+mone koti harou ose
+Mattu kisade
 Dere na na de de na de na de de re na<br>
 <br>
-Aji tore peya mone koti harou ose mattu kisade<br>
+Aji tore peya
+mone koti harou ose
+mattu kisade
 <br>
-Bahu chesta kore tore peilu<br>
-Tor asha mi te harpeylu<br>
-Durey na koris more Hm umm<br>
+Bahu chesta kore tore peilu
+Tor asha mi te harpeylu
+Durey na koris more Hm umm
 <br>
-Bahu chesta kore tore peilu<br>
-Tor bana mi te harpeylu<br>
-Durey na koris more Ho a a<br>
+Bahu chesta kore tore peilu
+Tor bana mi te harpeylu
+Durey na koris more Ho a a
 <br>
-Aji tore peya mone koti harou ose<br>
+Aji tore peya 
+mone koti harou ose
+mattu kisade
 <br>
 Dere na de de na de de na de re na de na de Ho a Ho a a a<br>
 <br>
-Hopone tepyang a nikka dehuri tore mi<br>
-Ti sara mi te ar karou na bhawuri<br>
-Ti mor bana ti mor habi<br>
-Ti sara mi te ar karo na khalkouri<br>
+Hopone tepyang a nikka tore me dehuri
+Ti sara mi te ar karou na bhawuri
+Ti mor bana ti mor habbi
+Ti sara mi te ar karo na khalkouri
 <br>
-Dere na de de na de de na de re na de na de Ho a Ho a a a
+Thytai jebakau ti
+mor loge 
+durey thayau thaytai
+mor banar leyfame
+<br>
