@@ -1,7 +1,7 @@
 ---
 layout: song
 title: "Tor Sale"
-permalink: /songs/tor-sale.html
+permalink: /songs/tor-sale/
 release_date: "2026-09-25"
 cover_art: "/Images/TorSale.png"
 genre: "Acoustic Pop"
