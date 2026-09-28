@@ -1,7 +1,7 @@
 ---
 layout: song
 title: "Banar Moyango"
-permalink: /songs/banar-moyango.html
+permalink: /songs/banar-moyango/
 release_date: "2026-09-25"
 cover_art: "/Images/BanarMoyango.png"
 genre: "Acoustic Pop"
