@@ -1,7 +1,7 @@
 ---
 layout: song
 title: "Jauriga Nai Beliya"
-permalink: /songs/jauriga-nai-beliya.html
+permalink: /songs/jauriga-nai-beliya/
 release_date: "2026-09-25"
 cover_art: "/Images/JaurigaNaiBeliya.png"
 genre: "Classic"
