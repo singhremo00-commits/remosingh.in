@@ -1,7 +1,7 @@
 ---
 layout: song
 title: "Nigisga Durey"
-permalink: /songs/nigisga-durey.html
+permalink: /songs/nigisga-durey/
 release_date: "2026-09-25"
 cover_art: "/Images/NigisgaDurey.png"
 genre: "Acoustic Pop"
