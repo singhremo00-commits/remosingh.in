@@ -1,7 +1,7 @@
 ---
 layout: song
 title: "Thaile Ti Kumpey"
-permalink: /songs/thaile-ti-kumpey.html
+permalink: /songs/thaile-ti-kumpey/
 release_date: "2026-09-25"
 cover_art: "/images/ThaileTiKumpey.jpg"
 genre: "Acoustic"
