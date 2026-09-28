@@ -1,7 +1,7 @@
 ---
 layout: song
 title: "Aaji Dehiya Tore"
-permalink: /songs/aaji-dehiya-tore.html
+permalink: /songs/aaji-dehiya-tore/
 release_date: "2026-09-25"
 cover_art: "/Images/AajiDehiyaTore.png"
 genre: "Acoustic Pop"
