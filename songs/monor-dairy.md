@@ -1,7 +1,7 @@
 ---
 layout: song
 title: "Monor Dairy"
-permalink: /songs/monor-dairy.html
+permalink: /songs/monor-dairy/
 release_date: "2026-09-25"
 cover_art: "/Images/MonorDairy.png"
 genre: "Acoustic Pop"
