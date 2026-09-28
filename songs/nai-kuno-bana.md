@@ -1,7 +1,7 @@
 ---
 layout: song
 title: "Nai Kuno Bana"
-permalink: /songs/nai-kuno-bana.html
+permalink: /songs/nai-kuno-bana/
 release_date: "2026-09-25"
 cover_art: "/images/NaiKunoBana.jpg"
 genre: "Acoustic Pop"
