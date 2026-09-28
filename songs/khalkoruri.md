@@ -1,7 +1,7 @@
 ---
 layout: song
 title: "Khalkoruri"
-permalink: /songs/khalkoruri.html
+permalink: /songs/khalkoruri/
 release_date: "2026-09-25"
 cover_art: "/Images/Khalkoruri.png"
 genre: "Acoustic"
