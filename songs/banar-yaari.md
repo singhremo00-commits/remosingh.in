@@ -1,7 +1,7 @@
 ---
 layout: song
 title: "Banar Yaari"
-permalink: /songs/banar-yaari.html
+permalink: /songs/banar-yaari/
 release_date: "2026-09-25"
 cover_art: "/Images/BanarYaari.png"
 genre: "Acoustic Pop"
