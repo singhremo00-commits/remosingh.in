@@ -1,7 +1,7 @@
 ---
 layout: song
 title: "Mattou Me Kisade"
-permalink: /songs/mattou-me-kisade.html
+permalink: /songs/mattou-me-kisade/
 release_date: "2026-09-25"
 cover_art: "/Images/MattouMeKisade.png"
 genre: "Acoustic Pop"
