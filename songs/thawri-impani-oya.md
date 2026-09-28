@@ -1,7 +1,7 @@
 ---
 layout: song
 title: "Thawri Impani Oya"
-permalink: /songs/thawri-impani-oya.html
+permalink: /songs/thawri-impani-oya/
 release_date: "2026-09-25"
 cover_art: "/Images/ThawriImpaniOya.png"
 genre: "Acoustic Pop"
@@ -13,32 +13,32 @@ lyrics_by: "Remo Singh"
 composition: "Remo Singh"
 ---
 
-Thauri impaniya<br>
-Tore khalkoriya<br>
-T aytai e e buliya ||<br>
-<br>
-Kiya nauri ti<br>
-Hmmm hm hm<br>
-Kiya nauri ti<br>
-Thaylu tore<br>
-Basiya Akhula..<br>
-<br>
-Thauri impaniya<br>
-Tore khalkoriya<br>
-T aytai e e buliya ||<br>
-<br>
-Nigshing oytai<br>
-Akdin more<br>
-Aytai ti<br>
-Bisareya ||<br>
-<br>
-Napeytai bisareya<br>
-More ti a malema ||<br>
-Mor naghan doriya daktei<br>
-Napeytai more bisareya ||<br>
-<br>
-Thauri impaniya<br>
-Tore khalkoriya<br>
-T aytai e e buliya ||<br>
-<br>
+Thauri impaniya
+Tore khalkoriya
+T aytai e e buliya ||
+
+Kiya nauri ti
+Hmmm hm hm
+Kiya nauri ti
+Thaylu tore
+Basiya Akhula..
+
+Thauri impaniya
+Tore khalkoriya
+T aytai e e buliya ||
+
+Nigshing oytai
+Akdin more
+Aytai ti
+Bisareya ||
+
+Napeytai bisareya
+More ti a malema ||
+Mor naghan doriya daktei
+Napeytai more bisareya ||
+
+Thauri impaniya
+Tore khalkoriya
+T aytai e e buliya ||
+
 Ayne thaylu tore basiya ||
