@@ -1,3 +1,6 @@
+---
+permalink: /about/
+---
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,11 +12,11 @@
   <meta name="title" content="About | Remo Singh">
   <meta name="description" content="Discover the journey of Remo Singh, an independent singer-songwriter crafting soulful, emotional, and acoustic music since 2018.">
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://remosingh.in/about.html">
+  <link rel="canonical" href="https://remosingh.in/about/">
 
   <!-- Open Graph -->
   <meta property="og:type" content="profile">
-  <meta property="og:url" content="https://remosingh.in/about.html">
+  <meta property="og:url" content="https://remosingh.in/about/">
   <meta property="og:title" content="About | Remo Singh">
   <meta property="og:description" content="The story, creative journey, and acoustic indie music of Remo Singh.">
   <meta property="og:image" content="https://remosingh.in/images/Remo%20singh3.png">
@@ -21,7 +24,7 @@
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:url" content="https://remosingh.in/about.html">
+  <meta name="twitter:url" content="https://remosingh.in/about/">
   <meta name="twitter:title" content="About | Remo Singh">
   <meta name="twitter:description" content="The story, creative journey, and acoustic indie music of Remo Singh.">
   <meta name="twitter:image" content="https://remosingh.in/images/Remo%20singh3.png">
@@ -29,8 +32,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@600;700&amp;display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="/style.css">
 
+  <!-- Google & AI Knowledge Graph Schema -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -43,14 +47,23 @@
         "birthDate": "1994-03-10",
         "url": "https://remosingh.in/",
         "image": "https://remosingh.in/images/Remo%20singh3.png",
-        "description": "Independent singer and songwriter creating soulful, acoustic, and emotional music."
+        "description": "Independent singer and songwriter creating soulful, acoustic, and emotional music.",
+        "sameAs": [
+          "https://share.google/n715qfgpnlEDeYglV",
+          "https://www.youtube.com/@remosingh"
+        ]
       },
       {
         "@type": "ProfilePage",
-        "@id": "https://remosingh.in/about.html#webpage",
-        "url": "https://remosingh.in/about.html",
+        "@id": "https://remosingh.in/about/#webpage",
+        "url": "https://remosingh.in/about/",
         "name": "About Remo Singh",
-        "isPartOf": { "@id": "https://remosingh.in/#website" },
+        "isPartOf": { 
+          "@type": "WebSite",
+          "@id": "https://remosingh.in/#website",
+          "name": "Remo Singh Official",
+          "url": "https://remosingh.in/"
+        },
         "about": { "@id": "https://remosingh.in/#person" }
       }
     ]
@@ -60,7 +73,7 @@
 <body>
 
   <header class="site-header">
-    <a href="index.html" class="brand-link" aria-label="Remo Singh Home">Remo Singh</a>
+    <a href="/" class="brand-link" aria-label="Remo Singh Home">Remo Singh</a>
     <button class="menu-trigger" id="menuTrigger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="menuOverlay">
       <span>Menu</span>
       <div class="menu-icon-bars" aria-hidden="true">
@@ -74,12 +87,12 @@
     <button class="menu-close-btn" id="menuClose" aria-label="Close navigation menu">&times;</button>
     <nav>
       <ul class="overlay-nav-list">
-        <li><a href="index.html" class="overlay-nav-link">Home</a></li>
-        <li><a href="music.html" class="overlay-nav-link">Music</a></li>
-        <li><a href="videos.html" class="overlay-nav-link">Videos</a></li>
-        <li><a href="about.html" class="overlay-nav-link active">About</a></li>
-        <li><a href="gallery.html" class="overlay-nav-link">Gallery</a></li>
-        <li><a href="contact.html" class="overlay-nav-link">Contact</a></li>
+        <li><a href="/" class="overlay-nav-link">Home</a></li>
+        <li><a href="/music.html" class="overlay-nav-link">Music</a></li>
+        <li><a href="/videos.html" class="overlay-nav-link">Videos</a></li>
+        <li><a href="/about/" class="overlay-nav-link active">About</a></li>
+        <li><a href="/gallery.html" class="overlay-nav-link">Gallery</a></li>
+        <li><a href="/contact.html" class="overlay-nav-link">Contact</a></li>
       </ul>
     </nav>
   </div>
@@ -93,7 +106,7 @@
     <article class="about-content">
       <div class="about-image-wrapper">
         <img 
-          src="images/Remo%20singh3.png" 
+          src="/images/Remo%20singh3.png" 
           alt="Remo Singh - Singer and Songwriter" 
           class="about-img" 
           loading="eager"
@@ -119,6 +132,6 @@
     <p>&copy; 2026 Remo Singh. All rights reserved.</p>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="/script.js"></script>
 </body>
 </html>
