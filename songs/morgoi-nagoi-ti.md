@@ -1,13 +1,13 @@
 ---
 layout: song
 title: "Morgoi Nagoi Ti"
-permalink: /songs/morgoi-nagoi-ti.html
+permalink: /songs/morgoi-nagoi-ti/
 release_date: "2026-09-25"
 cover_art: "/images/MorgoiNagoiTi.jpg"
-genre: "Acoustic Pop"
+genre: "Sad"
 language: "Bishnupriya Manipuri"
 duration: "PT3M20S"
-description: "Morgoi Nagoi Ti blends melancholic chords with intimate vocals by Remo Singh."
+description: "The song "Morgoi Nagoi Ti" blends melancholic chords with emotional reflections. It is written, composed, and sung by Remo Singh, with music produced by Rupam Nath."
 singer: "Remo Singh"
 lyrics_by: "Remo Singh"
 composition: "Remo Singh"
