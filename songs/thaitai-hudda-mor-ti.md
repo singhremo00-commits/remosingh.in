@@ -1,7 +1,7 @@
 ---
 layout: song
 title: "Thaitai Hudda Mor Ti"
-permalink: /songs/thaitai-hudda-mor-ti.html
+permalink: /songs/thaitai-hudda-mor-ti/
 release_date: "2026-09-25"
 cover_art: "/Images/ThaitaiHuddaMorTi.png"
 genre: "Acoustic Pop"
