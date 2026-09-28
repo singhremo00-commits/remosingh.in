@@ -1,7 +1,7 @@
 ---
 layout: song
 title: "Nais Durey Durey"
-permalink: /songs/nais-durey-durey.html
+permalink: /songs/nais-durey-durey/
 release_date: "2026-09-25"
 cover_art: "/Images/NaisDureyDurey.png"
 genre: "Acoustic Pop"
