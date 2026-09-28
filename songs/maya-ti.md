@@ -1,7 +1,7 @@
 ---
 layout: song
 title: "Maya Ti"
-permalink: /songs/maya-ti.html
+permalink: /songs/maya-ti/
 release_date: "2026-09-25"
 cover_art: "/Images/MayaTi.png"
 genre: "Acoustic Pop"
