@@ -1,7 +1,7 @@
 ---
 layout: song
 title: "Ahesile"
-permalink: /songs/ahesile.html
+permalink: /songs/ahesile/
 release_date: "2026-09-25"
 cover_art: "/images/Ahesile.jpg"
 genre: "Acoustic Pop"
