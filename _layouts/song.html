@@ -6,9 +6,13 @@ layout: null
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ page.title }} Lyrics & Details | Remo Singh Official</title>
+  <title>{{ page.title }} Lyrics &amp; Details | Remo Singh Official</title>
   <meta name="description" content="{{ page.description | default: 'Read official lyrics, credits, and details for ' | append: page.title | append: ' by Remo Singh.' }}">
   <link rel="canonical" href="https://remosingh.in{{ page.permalink }}">
+
+  <!-- Favicon Links -->
+  <link rel="icon" type="image/png" sizes="192x192" href="/images/favicon.png">
+  <link rel="apple-touch-icon" href="/images/favicon.png">
 
   <!-- Open Graph / Meta -->
   <meta property="og:type" content="music.song">
@@ -143,12 +147,19 @@ layout: null
     "description": {{ page.description | jsonify }},
     "byArtist": {
       "@type": "MusicGroup",
-      "@id": "https://remosingh.in/#artist",
+      "@id": "https://remosingh.in/#person",
       "name": "Remo Singh",
-      "url": "https://remosingh.in",
+      "url": "https://remosingh.in/",
       "sameAs": [
-        "https://share.google/n715qfgpnlEDeYglV",
-        "https://www.youtube.com/@remosingh"
+        "https://open.spotify.com/artist/7bGcTdqpFyXBpqxJEbW5Rs",
+        "https://music.apple.com/us/artist/remo-singh/1569242778",
+        "https://music.amazon.com/artists/B095XD3V3S/remo-singh",
+        "https://www.jiosaavn.com/artist/remo-singh-songs/KSHbJsmyFCc_",
+        "https://www.youtube.com/@remosingh1",
+        "https://www.instagram.com/remo__singh",
+        "https://www.facebook.com/share/17BgW6ULD3/",
+        "https://x.com/RemoSin14",
+        "https://www.linkedin.com/in/remo-singh-538544312"
       ]
     },
     "recordingOf": {
