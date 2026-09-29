@@ -2,7 +2,7 @@
 layout: song
 title: "Raati 2"
 permalink: /songs/raati-2/
-release_date: "2026-09-25"
+release_date: "2022-07-26"
 cover_art: "/images/raati2.jpg"
 genre: "RNB"
 language: "Bishnupriya Manipuri"
