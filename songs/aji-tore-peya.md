@@ -2,7 +2,7 @@
 layout: song
 title: "Aji Tore Peya"
 permalink: /songs/aji-tore-peya/
-release_date: "2026-09-25"
+release_date: "2020-02-15"
 cover_art: "/images/AjiTorePeya.jpg"
 genre: "Romantic"
 language: "Bishnupriya Manipuri"
