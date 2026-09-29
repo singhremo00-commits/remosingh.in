@@ -2,7 +2,7 @@
 layout: song
 title: "Nigshing Owri"
 permalink: /songs/nigshing-owri/
-release_date: "2026-09-25"
+release_date: "2021-06-21"
 cover_art: "/images/nigshing-owri.jpg"
 genre: "RAP"
 language: "Bishnupriya Manipuri"
