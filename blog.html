@@ -8,9 +8,9 @@ layout: null
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#090a0f">
 
-  <title>Stories &amp; Blog | Remo Singh Official</title>
-  <meta name="title" content="Stories &amp; Blog | Remo Singh Official">
-  <meta name="description" content="Official stories, music production insights, and behind-the-scenes updates from independent artist Remo Singh.">
+  <title>Blog | Remo Singh Official</title>
+  <meta name="title" content="Blog | Remo Singh Official">
+  <meta name="description" content="Official stories and music updates from independent artist Remo Singh.">
   <link rel="canonical" href="https://remosingh.in/blog.html">
 
   <!-- Favicon Links -->
@@ -20,8 +20,7 @@ layout: null
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://remosingh.in/blog.html">
-  <meta property="og:title" content="Stories &amp; Blog | Remo Singh">
-  <meta property="og:description" content="Official stories, song insights, and behind-the-scenes updates by Remo Singh.">
+  <meta property="og:title" content="Blog | Remo Singh">
   <meta property="og:image" content="https://remosingh.in/images/remo-singh-hero.jpg">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -33,22 +32,19 @@ layout: null
     .blog-page-container {
       max-width: 900px;
       margin: 0 auto;
-      padding: 40px 20px 80px;
+      padding: 30px 20px 80px;
     }
-    .blog-page-header {
-      text-align: center;
-      margin-bottom: 50px;
-    }
-    .blog-page-title {
-      font-size: 34px;
-      font-weight: 700;
-      color: #ffffff;
-      font-family: 'Space Grotesk', sans-serif;
-      margin-bottom: 10px;
-    }
-    .blog-page-subtitle {
-      font-size: 15px;
+
+    .blog-back-btn {
+      display: inline-block;
       color: #94a3b8;
+      text-decoration: none;
+      font-size: 14px;
+      margin-bottom: 25px;
+      transition: color 0.2s;
+    }
+    .blog-back-btn:hover {
+      color: #38bdf8;
     }
 
     /* Auto Blog Grid */
@@ -80,7 +76,7 @@ layout: null
     }
     .post-card-thumb {
       width: 100%;
-      height: 200px;
+      height: 220px;
       object-fit: cover;
       background: #1e222d;
     }
@@ -96,22 +92,15 @@ layout: null
       font-weight: 600;
       text-transform: uppercase;
       letter-spacing: 0.5px;
-      margin-bottom: 8px;
+      margin-bottom: 10px;
     }
     .post-card-title {
       font-size: 20px;
       color: #ffffff;
       font-weight: 700;
       line-height: 1.35;
-      margin-bottom: 10px;
+      margin-bottom: 18px;
       font-family: 'Space Grotesk', sans-serif;
-    }
-    .post-card-excerpt {
-      font-size: 14px;
-      color: #94a3b8;
-      line-height: 1.6;
-      margin-bottom: 16px;
-      flex-grow: 1;
     }
     .post-card-readmore {
       font-size: 13px;
@@ -120,25 +109,17 @@ layout: null
       display: inline-flex;
       align-items: center;
       gap: 6px;
-    }
-
-    .empty-blog-message {
-      text-align: center;
-      color: #64748b;
-      padding: 40px 0;
-      font-size: 16px;
+      margin-top: auto;
     }
   </style>
 
-  <!-- Collection Schema for Google Discovery -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
     "@id": "https://remosingh.in/blog.html#collection",
     "url": "https://remosingh.in/blog.html",
-    "name": "Stories & Articles by Remo Singh",
-    "description": "Official stories, music production insights, and behind-the-scenes updates from Remo Singh.",
+    "name": "Blog by Remo Singh",
     "isPartOf": { "@id": "https://remosingh.in/#website" }
   }
   </script>
@@ -146,12 +127,7 @@ layout: null
 
 <body class="blog-listing-body">
   <div class="blog-page-container">
-    <a href="/index.html" class="post-back-link" style="display:inline-block; color:#94a3b8; text-decoration:none; font-size:14px; margin-bottom:20px;">&larr; Back to Home</a>
-
-    <header class="blog-page-header">
-      <h1 class="blog-page-title">Stories &amp; Behind The Music</h1>
-      <p class="blog-page-subtitle">The thoughts, the journeys, and the stories behind my songs.</p>
-    </header>
+    <a href="/index.html" class="blog-back-btn">&larr; Back to Home</a>
 
     <div class="blog-posts-grid">
       {% for post in site.posts %}
@@ -160,16 +136,11 @@ layout: null
         <img src="{{ post.image }}" alt="{{ post.title }}" class="post-card-thumb" loading="lazy">
         {% endif %}
         <div class="post-card-content">
-          <span class="post-card-date">{{ post.date | date: "%B %d, %Y" }}</span>
+          <span class="post-card-date">{{ post.date | date: "%B %d, %Y &bull; %I:%M %p" }}</span>
           <h2 class="post-card-title">{{ post.title }}</h2>
-          <p class="post-card-excerpt">{{ post.description | default: post.content | strip_html | truncatewords: 22 }}</p>
           <span class="post-card-readmore">Read full story &rarr;</span>
         </div>
       </a>
-      {% else %}
-      <div class="empty-blog-message">
-        <p>Stories coming soon. Stay tuned!</p>
-      </div>
       {% endfor %}
     </div>
   </div>
