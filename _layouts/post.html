@@ -1,0 +1,182 @@
+---
+layout: null
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#090a0f">
+
+  <title>{{ page.title }} | Remo Singh</title>
+  <meta name="title" content="{{ page.title }} | Remo Singh">
+  <meta name="description" content="{{ page.description | default: content | strip_html | truncate: 160 }}">
+  <link rel="canonical" href="https://remosingh.in{{ page.url }}">
+
+  <!-- Favicon Links -->
+  <link rel="icon" type="image/png" sizes="192x192" href="/images/favicon.png">
+  <link rel="apple-touch-icon" href="/images/favicon.png">
+
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://remosingh.in{{ page.url }}">
+  <meta property="og:title" content="{{ page.title }}">
+  <meta property="og:description" content="{{ page.description | default: content | strip_html | truncate: 160 }}">
+  <meta property="og:image" content="https://remosingh.in{{ page.image | default: '/images/remo-singh-hero.jpg' }}">
+  <meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}">
+  <meta property="article:author" content="https://remosingh.in/#person">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ page.title }}">
+  <meta name="twitter:description" content="{{ page.description | default: content | strip_html | truncate: 160 }}">
+  <meta name="twitter:image" content="https://remosingh.in{{ page.image | default: '/images/remo-singh-hero.jpg' }}">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+
+  <style>
+    .post-container {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 40px 20px 80px;
+    }
+    .post-header {
+      margin-bottom: 30px;
+    }
+    .post-back-link {
+      display: inline-block;
+      color: #94a3b8;
+      text-decoration: none;
+      font-size: 14px;
+      margin-bottom: 20px;
+      transition: color 0.2s;
+    }
+    .post-back-link:hover {
+      color: #38bdf8;
+    }
+    .post-meta {
+      font-size: 13px;
+      color: #38bdf8;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+    .post-title {
+      font-size: 32px;
+      font-weight: 700;
+      color: #ffffff;
+      line-height: 1.3;
+      margin-bottom: 20px;
+      font-family: 'Space Grotesk', sans-serif;
+    }
+    .post-hero-image {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 30px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    }
+    .post-body {
+      font-size: 17px;
+      line-height: 1.8;
+      color: #cbd5e1;
+    }
+    .post-body h2 {
+      font-size: 22px;
+      color: #ffffff;
+      margin: 35px 0 15px;
+    }
+    .post-body p {
+      margin-bottom: 20px;
+    }
+    .post-body a {
+      color: #38bdf8;
+      text-decoration: underline;
+    }
+    .post-footer-author {
+      margin-top: 50px;
+      padding: 24px;
+      background: #181b22;
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .post-author-img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+    .post-author-info h4 {
+      color: #ffffff;
+      font-size: 16px;
+      margin-bottom: 4px;
+    }
+    .post-author-info p {
+      color: #94a3b8;
+      font-size: 13px;
+      margin: 0;
+    }
+  </style>
+
+  <!-- Google & AI Structured Schema for Top Indexing -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "@id": "https://remosingh.in{{ page.url }}#article",
+    "headline": {{ page.title | jsonify }},
+    "description": {{ page.description | default: content | strip_html | truncate: 160 | jsonify }},
+    "image": "https://remosingh.in{{ page.image | default: '/images/remo-singh-hero.jpg' }}",
+    "datePublished": {{ page.date | date_to_xmlschema | jsonify }},
+    "dateModified": {{ page.date | date_to_xmlschema | jsonify }},
+    "mainEntityOfPage": "https://remosingh.in{{ page.url }}",
+    "author": {
+      "@type": "Person",
+      "@id": "https://remosingh.in/#person",
+      "name": "Remo Singh",
+      "url": "https://remosingh.in/"
+    },
+    "publisher": {
+      "@type": "Person",
+      "@id": "https://remosingh.in/#person",
+      "name": "Remo Singh"
+    },
+    "inLanguage": "en"
+  }
+  </script>
+</head>
+
+<body class="blog-post-body">
+  <div class="post-container">
+    <a href="/blog.html" class="post-back-link">&larr; Back to all stories</a>
+
+    <header class="post-header">
+      <div class="post-meta">{{ page.date | date: "%B %d, %Y" }} &bull; By Remo Singh</div>
+      <h1 class="post-title">{{ page.title }}</h1>
+    </header>
+
+    {% if page.image %}
+    <img src="{{ page.image }}" alt="{{ page.title }}" class="post-hero-image">
+    {% endif %}
+
+    <article class="post-body">
+      {{ content }}
+    </article>
+
+    <div class="post-footer-author">
+      <img src="/images/Remo%20singh3.png" alt="Remo Singh" class="post-author-img">
+      <div class="post-author-info">
+        <h4>Remo Singh</h4>
+        <p>Independent singer, songwriter, and music producer creating modern acoustic &amp; Bishnupriya Manipuri indie songs.</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+  
