@@ -3,7 +3,7 @@
 layout: post
 title: "BURESU ME – New Bishnupriya Manipuri Song by Remo Singh Coming Soon"
 date: 2026-10-01 23:34:00 +0530
-image: /images/buresu-me.jpg
+image: /images/buresu-me.png
 
 BURESU ME – A New Bishnupriya Manipuri Song by Remo Singh
 
