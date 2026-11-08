@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bishnupriya Manipuri Etymological Dictionary - Remo Singh</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #e0e0e0;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h1 {
+            color: #ff9800;
+            text-align: center;
+        }
+        .search-box {
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            background: #1e1e1e;
+            border: 1px solid #333;
+            color: #fff;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .word-card {
+            background: #1e1e1e;
+            border-left: 4px solid #ff9800;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 4px;
+        }
+        .word-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #ffb74d;
+        }
+        .word-meaning {
+            margin-top: 5px;
+            font-size: 14px;
+            color: #ccc;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Bishnupriya Manipuri Etymological Dictionary</h1>
+    <p style="text-align: center; color: #888;">Dr. K. P. Sinha's Etymological Dictionary</p>
+    
+    <input type="text" id="searchInput" class="search-box" placeholder="Search word (e.g., AKKAR, AJA, AHI)..." onkeyup="searchWord()">
+
+    <div id="resultsContainer">
+        <div class="word-card">
+            <div class="word-title">AKKAR (আক্কার)</div>
+            <div class="word-meaning">Meaning: Letter / Alphabet. (Td. *akşara*)</div>
+        </div>
+        <div class="word-card">
+            <div class="word-title">AJĀ (অজা)</div>
+            <div class="word-meaning">Meaning: Grandfather / Teacher / Sir. (Td. *āryaka* / *upādhyāya*)</div>
+        </div>
+        <div class="word-card">
+            <div class="word-title">AHI (আহি)</div>
+            <div class="word-meaning">Meaning: Eye. (Td. *akşi*)</div>
+        </div>
+        <div class="word-card">
+            <div class="word-title">UBA (উবা)</div>
+            <div class="word-meaning">Meaning: Erect, standing. (Td. *ūrdhvaka*)</div>
+        </div>
+        <div class="word-card">
+            <div class="word-title">GÃO (গাঁও)</div>
+            <div class="word-meaning">Meaning: Village. (Td. *grāma*)</div>
+        </div>
+    </div>
+</div>
+
+<script>
+function searchWord() {
+    let input = document.getElementById('searchInput').value.toLowerCase();
+    let cards = document.getElementsByClassName('word-card');
+    
+    for (let i = 0; i < cards.length; i++) {
+        let title = cards[i].getElementsByClassName('word-title')[0].innerText.toLowerCase();
+        let meaning = cards[i].getElementsByClassName('word-meaning')[0].innerText.toLowerCase();
+        
+        if (title.includes(input) || meaning.includes(input)) {
+            cards[i].style.display = "";
+        } else {
+            cards[i].style.display = "none";
+        }
+    }
+}
+</script>
+
+</body>
+</html>
