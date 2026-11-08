@@ -32,7 +32,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@600;700&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 
   <script type="application/ld+json">
@@ -71,6 +71,216 @@
     ]
   }
   </script>
+
+  <style>
+    :root {
+      --bg: #090a0f;
+      --card-bg: #13161f;
+      --card-border: #212635;
+      --accent: #1db954;
+      --accent-dim: rgba(29, 185, 84, 0.12);
+      --text: #ffffff;
+      --text-muted: #9aa0a6;
+      --text-dim: #646b79;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      margin: 0;
+      padding: 0;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .about-container {
+      max-width: 660px;
+      margin: 0 auto;
+      padding: 20px 18px 60px;
+    }
+
+    /* Hero Bio Card */
+    .profile-card {
+      background: linear-gradient(180deg, #161a26 0%, #10131b 100%);
+      border: 1px solid var(--card-border);
+      border-radius: 20px;
+      padding: 32px 20px 24px;
+      text-align: center;
+      margin-top: 15px;
+      margin-bottom: 24px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    }
+
+    .avatar-box {
+      width: 140px;
+      height: 140px;
+      margin: 0 auto 18px;
+      border-radius: 24px;
+      overflow: hidden;
+      border: 2px solid #2b3244;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.6);
+    }
+
+    .avatar-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .badge-pill {
+      display: inline-block;
+      background: var(--accent-dim);
+      color: var(--accent);
+      border: 1px solid rgba(29, 185, 84, 0.25);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      padding: 4px 12px;
+      border-radius: 20px;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+    }
+
+    .profile-card h1 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 28px;
+      font-weight: 700;
+      margin: 0 0 6px 0;
+      letter-spacing: -0.5px;
+    }
+
+    .profile-card .tagline {
+      color: var(--text-muted);
+      font-size: 13.5px;
+      margin: 0 0 18px 0;
+    }
+
+    .tags-cloud {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 7px;
+    }
+
+    .tag {
+      background: #1c212f;
+      border: 1px solid #2a3144;
+      color: #cbd5e1;
+      font-size: 11.5px;
+      font-weight: 500;
+      padding: 4px 12px;
+      border-radius: 12px;
+    }
+
+    /* Highlights Counter */
+    .highlights-row {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+
+    .highlight-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 14px;
+      padding: 14px 16px;
+      text-align: center;
+    }
+
+    .highlight-num {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 22px;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .highlight-label {
+      color: var(--text-dim);
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      margin-top: 2px;
+    }
+
+    /* Modern Story Section Cards */
+    .content-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 18px;
+      padding: 24px 20px;
+      margin-bottom: 16px;
+    }
+
+    .content-card h2 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 17px;
+      font-weight: 700;
+      margin: 0 0 14px 0;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .content-card h2::before {
+      content: "";
+      width: 4px;
+      height: 16px;
+      background: var(--accent);
+      border-radius: 2px;
+      display: inline-block;
+    }
+
+    .content-card p {
+      color: #b1b7c4;
+      font-size: 14px;
+      line-height: 1.7;
+      margin: 0 0 14px 0;
+    }
+
+    .content-card p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Streaming Links Pill Row */
+    .stream-links {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .stream-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #1b1f2b;
+      border: 1px solid #2d3447;
+      color: #fff;
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.2s, border-color 0.2s;
+    }
+
+    .stream-btn:hover {
+      background: #252b3c;
+      border-color: #434d67;
+    }
+
+    /* Footer Styling */
+    footer {
+      text-align: center;
+      padding: 30px 0 10px;
+      color: var(--text-dim);
+      font-size: 12px;
+    }
+  </style>
 </head>
 
 <body>
@@ -102,79 +312,108 @@
     </nav>
   </div>
 
-  <main class="main-wrapper">
+  <main class="about-container">
 
-    <div class="page-header">
-      <h1 class="page-title">About Remo Singh</h1>
-      <p class="page-subtitle">The journey, the sound, and the stories behind the music.</p>
-    </div>
-
-    <article class="about-content">
-
-      <div class="about-image-wrapper">
+    <!-- Profile Identity Card -->
+    <div class="profile-card">
+      <div class="avatar-box">
         <img 
           src="images/Remo%20singh3.png" 
           alt="Remo Singh - Singer, Songwriter and Music Producer" 
-          class="about-img" 
           loading="eager"
-          width="600"
-          height="750">
+          width="140"
+          height="140">
       </div>
 
-      <div class="about-text-wrapper">
+      <span class="badge-pill">Independent Artist</span>
+      <h1>Remo Singh</h1>
+      <p class="tagline">The journey, the sound, and the stories behind the music.</p>
 
-        <p>
-          I’m Remo Singh, an independent singer, songwriter and music producer from Assam, India. 
-          I started creating music on my own in 2018. Music has always been something I was naturally 
-          drawn to, and over time it became a way for me to express the things I feel, think and experience.
-        </p>
-
-        <p>
-          I’m completely self-taught. I have never taken formal training in singing or music. 
-          Whatever I know today has come from listening, experimenting, practicing and making mistakes 
-          along the way. I learned by actually doing things—writing songs, creating melodies, recording 
-          vocals and working on the production myself.
-        </p>
-
-        <p>
-          Writing is probably the most personal part of music for me. I write my own lyrics and create 
-          my own melodies. Many of my songs come from simple thoughts, emotions, memories or situations 
-          that stayed with me. I don’t always try to follow a particular genre. I just like making music 
-          that feels honest to me.
-        </p>
-
-        <p>
-          Since 2018, I have written and created more than 30 songs. Some were completed, some remained 
-          unfinished, and some took years before I felt ready to work on them again. Every song has its 
-          own story, and each one is a small part of my journey with music.
-        </p>
-
-        <h2>A Break From Music</h2>
-
-        <p>
-          From 2021 to 2025, I took a break from singing and active music creation to focus on my personal 
-          education and other things in life. For several years, I wasn’t actively releasing or working 
-          on songs. Still, music never completely left me.
-        </p>
-
-        <p>
-          In 2026, I started coming back to music again. After such a long break, returning to singing 
-          and songwriting feels different. I’m not trying to rush anything. I simply want to keep creating, 
-          keep learning and give the songs that I believe in a chance to be heard.
-        </p>
-
-        <p>
-          For me, music isn’t something I learned from a course or a classroom. It’s something I have 
-          been learning by myself, one song at a time.
-        </p>
-
+      <div class="tags-cloud">
+        <span class="tag">Songwriter</span>
+        <span class="tag">Vocalist</span>
+        <span class="tag">Music Producer</span>
+        <span class="tag">Assam, India</span>
       </div>
-    </article>
+
+      <div class="stream-links">
+        <a href="https://open.spotify.com/artist/7bGcTdqpFyXBpqxJEbW5Rs" target="_blank" rel="noopener noreferrer" class="stream-btn">
+          Spotify
+        </a>
+        <a href="https://www.youtube.com/@remosingh1" target="_blank" rel="noopener noreferrer" class="stream-btn">
+          YouTube
+        </a>
+      </div>
+    </div>
+
+    <!-- Quick Stats Grid -->
+    <div class="highlights-row">
+      <div class="highlight-card">
+        <div class="highlight-num">2018</div>
+        <div class="highlight-label">Musical Start</div>
+      </div>
+      <div class="highlight-card">
+        <div class="highlight-num">30+</div>
+        <div class="highlight-label">Original Tracks</div>
+      </div>
+    </div>
+
+    <!-- Story Card 1: Roots -->
+    <section class="content-card">
+      <h2>The Musical Origin</h2>
+      <p>
+        I’m Remo Singh, an independent singer, songwriter and music producer from Assam, India[span_1](start_span)[span_1](end_span). 
+        I started creating music on my own in 2018[span_2](start_span)[span_2](end_span). Music has always been something I was naturally 
+        drawn to, and over time it became a way for me to express the things I feel, think and experience[span_3](start_span)[span_3](end_span).
+      </p>
+      <p>
+        I’m completely self-taught[span_4](start_span)[span_4](end_span). I have never taken formal training in singing or music[span_5](start_span)[span_5](end_span). 
+        Whatever I know today has come from listening, experimenting, practicing and making mistakes 
+        along the way[span_6](start_span)[span_6](end_span). I learned by actually doing things—writing songs, creating melodies, recording 
+        vocals and working on the production myself[span_7](start_span)[span_7](end_span).
+      </p>
+    </section>
+
+    <!-- Story Card 2: Personal Approach -->
+    <section class="content-card">
+      <h2>Writing & Pure Expression</h2>
+      <p>
+        Writing is probably the most personal part of music for me[span_8](start_span)[span_8](end_span). I write my own lyrics and create 
+        my own melodies[span_9](start_span)[span_9](end_span). Many of my songs come from simple thoughts, emotions, memories or situations 
+        that stayed with me[span_10](start_span)[span_10](end_span). I don’t always try to follow a particular genre[span_11](start_span)[span_11](end_span). I just like making music 
+        that feels honest to me[span_12](start_span)[span_12](end_span).
+      </p>
+      <p>
+        Since 2018, I have written and created more than 30 songs[span_13](start_span)[span_13](end_span). Some were completed, some remained 
+        unfinished, and some took years before I felt ready to work on them again[span_14](start_span)[span_14](end_span). Every song has its 
+        own story, and each one is a small part of my journey with music[span_15](start_span)[span_15](end_span).
+      </p>
+    </section>
+
+    <!-- Story Card 3: The Return -->
+    <section class="content-card">
+      <h2>A Break From Music & 2026 Return</h2>
+      <p>
+        From 2021 to 2025, I took a break from singing and active music creation to focus on my personal 
+        education and other things in life[span_16](start_span)[span_16](end_span). For several years, I wasn’t actively releasing or working 
+        on songs[span_17](start_span)[span_17](end_span). Still, music never completely left me[span_18](start_span)[span_18](end_span).
+      </p>
+      <p>
+        In 2026, I started coming back to music again[span_19](start_span)[span_19](end_span). After such a long break, returning to singing 
+        and songwriting feels different[span_20](start_span)[span_20](end_span). I’m not trying to rush anything[span_21](start_span)[span_21](end_span). I simply want to keep creating, 
+        keep learning and give the songs that I believe in a chance to be heard[span_22](start_span)[span_22](end_span).
+      </p>
+      <p>
+        For me, music isn’t something I learned from a course or a classroom[span_23](start_span)[span_23](end_span). It’s something I have 
+        been learning by myself, one song at a time[span_24](start_span)[span_24](end_span).
+      </p>
+    </section>
+
+    <footer>
+      <p>&copy; 2026 Remo Singh. All rights reserved.</p>[span_25](start_span)[span_25](end_span)
+    </footer>
+
   </main>
-
-  <footer>
-    <p>&copy; 2026 Remo Singh. All rights reserved.</p>
-  </footer>
 
   <script src="script.js"></script>
 </body>
