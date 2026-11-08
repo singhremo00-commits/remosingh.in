@@ -1255,3 +1255,11 @@ footer {
   margin-bottom: 0;
 }
 
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #e0e0e0;
+    margin: 0;
+    padding: 20px;
+    padding-bottom: 60px; /* Isse niche thoda extra space aa jayega */
+}
