@@ -372,33 +372,6 @@ h1.page-title {
   gap: 0.4rem;
 }
 
-/* About Layout */
-.about-grid {
-.about-container {
-  max-width: 660px;
-  margin: 0 auto;
-  padding: 10px 18px 60px; /* Header se proper spacing */
-}
-
-.profile-card {
-  background: linear-gradient(180deg, #161a26 0%, #10131b 100%);
-  border: 1px solid var(--card-border);
-  border-radius: 20px;
-  padding: 28px 20px 22px;
-  text-align: center;
-  margin-top: 18px; /* Header se chipkega nahi */
-  margin-bottom: 24px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-}
-
-.profile-card h1 {
-  font-family: 'Space Grotesk', sans-serif;
-  font-size: 22px; /* Font size ko thoda compact kiya taaki heavy na lage */
-  font-weight: 700;
-  margin: 0 0 6px 0;
-  letter-spacing: -0.3px;
-}
-
 /* Videos Layout */
 .video-grid {
   display: grid;
