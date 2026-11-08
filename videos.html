@@ -1,176 +1,191 @@
+---
+---
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#090a0f">
-
-  <title>Videos | Remo Singh Official Music &amp; Acoustic Performances</title>
-  <meta name="title" content="Videos | Remo Singh Official Music &amp; Acoustic Performances">
-  <meta name="description" content="Watch official music videos, lyric videos, and acoustic recordings by independent singer-songwriter Remo Singh.">
-  <meta name="robots" content="index, follow, max-video-preview:-1, max-image-preview:large">
-  <link rel="canonical" href="https://remosingh.in/videos.html">
-
-  <!-- Favicon Links -->
-  <link rel="icon" type="image/png" sizes="192x192" href="/images/favicon.png">
-  <link rel="apple-touch-icon" href="/images/favicon.png">
-
-  <!-- OpenGraph Metadata -->
-  <meta property="og:type" content="video.other">
-  <meta property="og:url" content="https://remosingh.in/videos.html">
-  <meta property="og:title" content="Videos | Remo Singh Official Music Videos">
-  <meta property="og:description" content="Watch official music videos and acoustic sessions by Remo Singh.">
-  <meta property="og:image" content="https://remosingh.in/images/remo-singh-hero.jpg">
-  <meta property="og:site_name" content="Remo Singh">
-
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:url" content="https://remosingh.in/videos.html">
-  <meta name="twitter:title" content="Videos | Remo Singh Official Music Videos">
-  <meta name="twitter:description" content="Watch official music videos and acoustic sessions by Remo Singh.">
-  <meta name="twitter:image" content="https://remosingh.in/images/remo-singh-hero.jpg">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-
-  <!-- Advanced AI & Google VideoObject Structured Data with sameAs -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Person",
-        "@id": "https://remosingh.in/#person",
-        "name": "Remo Singh",
-        "jobTitle": "Singer and Songwriter",
-        "birthDate": "1994-03-10",
-        "url": "https://remosingh.in/",
-        "sameAs": [
-          "https://www.youtube.com/@singhremo00",
-          "https://www.youtube.com/watch?v=NbVBWtYdvV4"
-        ]
-      },
-      {
-        "@type": "WebPage",
-        "@id": "https://remosingh.in/videos.html#webpage",
-        "url": "https://remosingh.in/videos.html",
-        "name": "Videos | Remo Singh",
-        "isPartOf": { "@id": "https://remosingh.in/#website" },
-        "about": { "@id": "https://remosingh.in/#person" }
-      },
-      {
-        "@type": "VideoObject",
-        "@id": "https://remosingh.in/videos.html#ti-sara-nei",
-        "name": "Ti Sara Nei - Official Music Video | Remo Singh",
-        "description": "Official Bishnupriya Manipuri music video 'Ti Sara Nei' composed, written, and performed by Remo Singh.",
-        "thumbnailUrl": [
-          "https://i.ytimg.com/vi/NbVBWtYdvV4/hqdefault.jpg",
-          "https://i.ytimg.com/vi/NbVBWtYdvV4/maxresdefault.jpg"
-        ],
-        "uploadDate": "2020-03-02T00:00:00+05:30",
-        "embedUrl": "https://www.youtube-nocookie.com/embed/NbVBWtYdvV4",
-        "inLanguage": "bpy",
-        "creator": {
-          "@id": "https://remosingh.in/#person"
-        }
-      }
-    ]
-  }
-  </script>
+  <title>Official Video Releases | Remo Singh</title>
+  <style>
+    body {
+      background: #090a0f;
+      color: #fff;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      margin: 0;
+      padding: 30px 16px;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .btn-back {
+      display: inline-block;
+      margin-bottom: 24px;
+      color: #888;
+      text-decoration: none;
+      font-size: 14px;
+      transition: color 0.2s;
+    }
+    .btn-back:hover {
+      color: #fff;
+    }
+    .header {
+      text-align: center;
+      margin-bottom: 35px;
+    }
+    .header .badge {
+      display: inline-block;
+      background: #ff0033;
+      color: #fff;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      padding: 4px 12px;
+      border-radius: 20px;
+      margin-bottom: 10px;
+    }
+    .header h1 {
+      margin: 0 0 6px 0;
+      font-size: 28px;
+    }
+    .header p {
+      color: #888;
+      margin: 0;
+      font-size: 13px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+    }
+    .card {
+      background: #141720;
+      border: 1px solid #232733;
+      border-radius: 14px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: #383e50;
+    }
+    .thumb-wrap {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16/9;
+      background: #000;
+    }
+    .thumb-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .play-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+    }
+    .play-icon {
+      background: #ff0000;
+      color: #fff;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      padding-left: 3px;
+      box-shadow: 0 4px 15px rgba(255, 0, 0, 0.5);
+    }
+    .card-content {
+      padding: 18px 16px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      justify-content: space-between;
+    }
+    .card-content h2 {
+      font-size: 18px;
+      margin: 0 0 4px 0;
+      color: #fff;
+    }
+    .card-content .meta {
+      color: #888;
+      font-size: 12px;
+      margin-bottom: 16px;
+    }
+    .yt-btn {
+      display: block;
+      background: #ff0000;
+      color: #fff;
+      font-weight: 700;
+      font-size: 13px;
+      padding: 10px 0;
+      border-radius: 25px;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .yt-btn:hover {
+      background: #cc0000;
+    }
+  </style>
 </head>
 <body>
 
-  <header class="site-header">
-    <a href="index.html" class="brand-link" aria-label="Remo Singh Home">Remo Singh</a>
-    <button class="menu-trigger" id="menuTrigger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="menuOverlay">
-      <span>Menu</span>
-      <div class="menu-icon-bars" aria-hidden="true">
-        <span></span>
-        <span></span>
-      </div>
-    </button>
-  </header>
+  <div class="container">
+    <a href="index.html" class="btn-back">&larr; Back to Home</a>
 
-  <div class="menu-overlay" id="menuOverlay" role="dialog" aria-modal="true" aria-label="Navigation Menu">
-    <button class="menu-close-btn" id="menuClose" aria-label="Close navigation menu">&times;</button>
-    <nav>
-      <ul class="overlay-nav-list">
-        <li><a href="index.html" class="overlay-nav-link">Home</a></li>
-        <li><a href="music.html" class="overlay-nav-link">Music</a></li>
-        <li><a href="videos.html" class="overlay-nav-link active">Videos</a></li>
-        <li><a href="about.html" class="overlay-nav-link">About</a></li>
-        <li><a href="gallery.html" class="overlay-nav-link">Gallery</a></li>
-        <li><a href="contact.html" class="overlay-nav-link">Contact</a></li>
-      </ul>
-    </nav>
-  </div>
-
-  <main class="main-wrapper">
-    <div class="page-header">
-      <h1 class="page-title">Videos</h1>
-      <p class="page-subtitle">Official music videos, lyric videos, and acoustic recordings.</p>
+    <div class="header">
+      <span class="badge">OFFICIAL RELEASES</span>
+      <h1>Watch on YouTube</h1>
+      <p>Stream official music videos and teasers by Remo Singh</p>
     </div>
 
-    <section class="video-grid" aria-label="Video Collection">
-      <!-- Video 1: Official Music Video (Ti Sara Nei) -->
-      <article class="video-card">
-        <div class="video-frame-wrapper">
-          <iframe 
-            src="https://www.youtube-nocookie.com/embed/NbVBWtYdvV4" 
-            title="Ti sara nei - Remo Singh Official Music Video" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen 
-            loading="lazy">
-          </iframe>
-        </div>
-        <div class="video-meta">
-          <span class="video-tag">Official Music Video</span>
-          <h2 class="video-title">Ti Sara Nei</h2>
-        </div>
-      </article>
+    <div class="grid">
 
-      <!-- Video 2: Official YouTube Playlist Collection -->
-      <article class="video-card">
-        <div class="video-frame-wrapper">
-          <iframe 
-            src="https://www.youtube-nocookie.com/embed/videoseries?list=RD5hrVKZWtWi4" 
-            title="Remo Singh Music Collection Playlist" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen 
-            loading="lazy">
-          </iframe>
+      <!-- Card: HOUPON -->
+      <div class="card">
+        <div class="thumb-wrap">
+          <img src="https://img.youtube.com/vi/8tc0aTQ9UA0/hqdefault.jpg" alt="Houpon - Remo Singh">
+          <a href="https://youtu.be/8tc0aTQ9UA0" class="play-overlay" onclick="openYouTubeApp(event, '8tc0aTQ9UA0')">
+            <span class="play-icon">▶</span>
+          </a>
         </div>
-        <div class="video-meta">
-          <span class="video-tag">Music Playlist</span>
-          <h2 class="video-title">Remo Singh Collection</h2>
+        <div class="card-content">
+          <div>
+            <h2>Houpon (Teaser)</h2>
+            <div class="meta">Original Music • Remo Singh</div>
+          </div>
+          <a href="https://youtu.be/8tc0aTQ9UA0" class="yt-btn" onclick="openYouTubeApp(event, '8tc0aTQ9UA0')">
+            Open in YouTube App
+          </a>
         </div>
-      </article>
+      </div>
 
-      <!-- Video 3: Future Session / Placeholder -->
-      <article class="video-card">
-        <div class="video-frame-wrapper">
-          <iframe 
-            src="https://www.youtube-nocookie.com/embed/" 
-            title="Remo Singh Live Performance Placeholder" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen 
-            loading="lazy">
-          </iframe>
-        </div>
-        <div class="video-meta">
-          <span class="video-tag">Live Performance</span>
-          <h2 class="video-title">Live Acoustic Session</h2>
-        </div>
-      </article>
-    </section>
-  </main>
+    </div>
+  </div>
 
-  <footer>
-    <p>&copy; 2026 Remo Singh. All rights reserved.</p>
-  </footer>
+  <script>
+    function openYouTubeApp(event, videoId) {
+      const isMobile = /Android|iPhone|iPad/i.test(navigator.userAgent);
+      if (isMobile) {
+        event.preventDefault();
+        window.location.href = "vnd.youtube:" + videoId;
+        setTimeout(() => {
+          window.location.href = "https://www.youtube.com/watch?v=" + videoId;
+        }, 1000);
+      }
+    }
+  </script>
 
-  <script src="script.js"></script>
 </body>
 </html>
