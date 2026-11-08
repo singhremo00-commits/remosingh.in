@@ -1075,3 +1075,183 @@ footer {
     display: none;
   }
 }
+
+/* ===================================================
+   ABOUT PAGE STYLING (MODERN MOBILE-FRIENDLY LAYOUT)
+   =================================================== */
+
+.about-page-wrapper {
+  max-width: 650px;
+  margin: 0 auto;
+  padding: 100px 18px 50px; /* Header overlap fix */
+  box-sizing: border-box;
+}
+
+/* Hero Identity Card */
+.artist-hero-card {
+  background: linear-gradient(180deg, #151924 0%, #10131a 100%);
+  border: 1px solid #232838;
+  border-radius: 22px;
+  padding: 28px 20px 22px;
+  text-align: center;
+  margin-bottom: 20px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+}
+
+.artist-avatar-wrap {
+  width: 130px;
+  height: 130px;
+  margin: 0 auto 16px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid #282f42;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+}
+
+.artist-avatar-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.role-pill {
+  display: inline-block;
+  background: rgba(29, 185, 84, 0.12);
+  color: #1db954;
+  border: 1px solid rgba(29, 185, 84, 0.3);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding: 4px 14px;
+  border-radius: 20px;
+  margin-bottom: 12px;
+}
+
+.artist-hero-card h1 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0 0 6px 0;
+  color: #ffffff;
+}
+
+.artist-hero-card .bio-tagline {
+  color: #8b949e;
+  font-size: 13px;
+  margin: 0 0 16px 0;
+  line-height: 1.5;
+}
+
+.pills-group {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 20px;
+}
+
+.pill-item {
+  background: #1b202c;
+  border: 1px solid #232838;
+  color: #cbd5e1;
+  font-size: 11px;
+  padding: 4px 10px;
+  border-radius: 8px;
+}
+
+.social-quick-links {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.btn-quick {
+  display: inline-flex;
+  align-items: center;
+  background: #181d29;
+  border: 1px solid #2d3446;
+  color: #ffffff;
+  padding: 7px 18px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.btn-quick:hover {
+  background: #242b3d;
+}
+
+/* Metrics Row */
+.metrics-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.metric-card {
+  background: #12151e;
+  border: 1px solid #212635;
+  border-radius: 14px;
+  padding: 14px;
+  text-align: center;
+}
+
+.metric-card .num {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.metric-card .label {
+  color: #8b949e;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: 3px;
+}
+
+/* Story Cards */
+.story-section {
+  background: #12151e;
+  border: 1px solid #212635;
+  border-radius: 16px;
+  padding: 22px 18px;
+  margin-bottom: 14px;
+}
+
+.story-section h2 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 10px 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.story-section h2::before {
+  content: "";
+  width: 4px;
+  height: 14px;
+  background: #1db954;
+  border-radius: 2px;
+  display: inline-block;
+}
+
+.story-section p {
+  color: #b3bac5;
+  font-size: 13.5px;
+  line-height: 1.65;
+  margin: 0 0 10px 0;
+}
+
+.story-section p:last-child {
+  margin-bottom: 0;
+}
+
