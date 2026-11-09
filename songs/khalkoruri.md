@@ -3,7 +3,7 @@ layout: song
 title: "Khalkoruri"
 permalink: /songs/khalkoruri/
 release_date: "2026-09-25"
-cover_art: "/images/Khalkoruri.png"
+cover_art: "/images/Khalkoruri.webp"
 genre: "Acoustic"
 language: "Bishnupriya Manipuri"
 duration: "PT3M20S"
