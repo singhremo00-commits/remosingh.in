@@ -3,7 +3,7 @@ layout: song
 title: "Maya Ti"
 permalink: /songs/maya-ti/
 release_date: "2026-09-25"
-cover_art: "/Images/MayaTi.png"
+cover_art: "/images/MayaTi.webp"
 genre: "Acoustic Pop"
 language: "Bishnupriya Manipuri"
 duration: "PT3M20S"
