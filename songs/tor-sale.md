@@ -3,7 +3,7 @@ layout: song
 title: "Tor Sale"
 permalink: /songs/tor-sale/
 release_date: "2026-09-25"
-cover_art: "/Images/TorSale.png"
+cover_art: "/images/TorSale.webp"
 genre: "Acoustic Pop"
 language: "Bishnupriya Manipuri"
 duration: "PT3M20S"
