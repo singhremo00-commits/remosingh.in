@@ -3,7 +3,7 @@ layout: song
 title: "Banar Moyango"
 permalink: /songs/banar-moyango/
 release_date: "2026-09-25"
-cover_art: "/Images/BanarMoyango.png"
+cover_art: "/images/BanarMoyango.webp"
 genre: "Acoustic Pop"
 language: "Bishnupriya Manipuri"
 duration: "PT3M20S"
