@@ -3,7 +3,7 @@ layout: song
 title: "Banar Yaari"
 permalink: /songs/banar-yaari/
 release_date: "2026-09-25"
-cover_art: "/Images/BanarYaari.png"
+cover_art: "/images/BanarYaari.webp"
 genre: "Acoustic Pop"
 language: "Bishnupriya Manipuri"
 duration: "PT3M20S"
