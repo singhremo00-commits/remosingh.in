@@ -3,7 +3,7 @@ layout: song
 title: "Hopon"
 permalink: /songs/hopon/
 release_date: "2026-09-25"
-cover_art: "/Images/Hopon.png"
+cover_art: "/images/Hopon.png"
 genre: "Acoustic Pop"
 language: "Bishnupriya Manipuri"
 duration: "PT3M20S"
