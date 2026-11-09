@@ -3,7 +3,7 @@ layout: song
 title: "Mattou Me Kisade"
 permalink: /songs/mattou-me-kisade/
 release_date: "2026-09-25"
-cover_art: "/images/MattouMeKisade.webp"
+cover_art: "/images/MattouMeKisade.png"
 genre: "Acoustic Pop"
 language: "Bishnupriya Manipuri"
 duration: "PT3M20S"
