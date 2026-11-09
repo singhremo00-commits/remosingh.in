@@ -3,7 +3,7 @@ layout: song
 title: "Aaji Dehiya Tore"
 permalink: /songs/aaji-dehiya-tore/
 release_date: "2020-03-02"
-cover_art: /images/AajDehiyaTore.webp
+cover_art: /images/AajiDehiyaTore.webp
 genre: "Acoustic Pop"
 language: "Bishnupriya Manipuri"
 duration: "PT3M20S"
