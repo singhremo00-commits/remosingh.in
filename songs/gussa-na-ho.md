@@ -3,7 +3,7 @@ layout: song
 title: "Gussa Na Ho"
 permalink: /songs/gussa-na-ho/
 release_date: "2026-09-25"
-cover_art: "/Images/GussaNaHo.png"
+cover_art: "/images/GussaNaHo.webp"
 genre: "Indie Pop"
 language: "Hindi"
 duration: "PT3M15S"
