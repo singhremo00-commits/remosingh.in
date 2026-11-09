@@ -3,7 +3,7 @@ layout: song
 title: "Monor Dairy"
 permalink: /songs/monor-dairy/
 release_date: "2026-09-25"
-cover_art: "/Images/MonorDairy.png"
+cover_art: "/images/MonorDairy.png"
 genre: "Acoustic Pop"
 language: "Bishnupriya Manipuri"
 duration: "PT3M20S"
