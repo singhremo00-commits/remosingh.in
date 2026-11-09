@@ -3,7 +3,7 @@ layout: song
 title: "Ti 2"
 permalink: /songs/ti-2/
 release_date: "2026-09-25"
-cover_art: "/Images/Ti2.png"
+cover_art: "/images/Ti2.webp"
 genre: "Acoustic Pop"
 language: "Bishnupriya Manipuri"
 duration: "PT3M20S"
