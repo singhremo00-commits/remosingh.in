@@ -3,7 +3,7 @@ layout: song
 title: "Jauriga Nai Beliya"
 permalink: /songs/jauriga-nai-beliya/
 release_date: "2026-09-25"
-cover_art: "/Images/JaurigaNaiBeliya.png"
+cover_art: "/images/JaurigaNaiBeliya.webp"
 genre: "Classic"
 language: "Bishnupriya Manipuri"
 duration: "PT3M20S"
