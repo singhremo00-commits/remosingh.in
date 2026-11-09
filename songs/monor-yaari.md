@@ -3,7 +3,7 @@ layout: song
 title: "Monor Yaari"
 permalink: /songs/monor-yaari/
 release_date: "2026-09-25"
-cover_art: "/Images/MonorYaari.png"
+cover_art: "/images/MonorYaari.png"
 genre: "Acoustic Pop"
 language: "Bishnupriya Manipuri"
 duration: "PT3M20S"
